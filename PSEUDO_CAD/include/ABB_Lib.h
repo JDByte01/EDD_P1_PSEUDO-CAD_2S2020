@@ -22,20 +22,32 @@ class ABB_lib
         Nodo_objeto* encontrar(int id);
         void insertar(Nodo_objeto* n);
         bool eliminar(int id);
+        bool estaVacio();
+
+        void imprimir();
 
         int getSize(){ return this->objetos; }
-        string getGraphviz();
+        string getGraphviz(string nombre);
 
     private:
         Nodo_objeto* raiz;
         int objetos;
 
+        //Variables graphviz
+        string graphIn = "digraph G{\n";
+        string g_initA = "ratio = \"auto\";\nlabel = \"ABB - ";
+        string g_initB = "\";\n";
+        string g_node = "node [fontsize = 12, shape = box];\n";
+        string g_nodes = "";
+
         bool existe(Nodo_objeto* raiz, int id);
         Nodo_objeto* encontrar(Nodo_objeto* raiz, int id);
         void insertar(Nodo_objeto* raiz, Nodo_objeto* n);
-        void eliminar(Nodo_objeto* raiz, int id);
+        bool eliminar(Nodo_objeto* raiz, int id);
 
-        string graphviz(Nodo_objeto* raiz);
+        void imprimir(Nodo_objeto* raiz);
+
+        string graphviz(Nodo_objeto* raiz, string txt);
 };
 
 #endif // ABB_LIB_H

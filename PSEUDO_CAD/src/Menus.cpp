@@ -72,26 +72,6 @@ void Menus::menuCargarLibrerias(){
             objeto->imprimirNodo();
             objeto->getPuntos()->imprimir();
 
-            objeto = new Nodo_objeto();
-            objeto->setIdentificador(2);
-            objeto->setNombre("prueba2");
-            objeto->setLetra("P");
-            objeto->setColor("#C5C5C5");
-
-
-
-            objeto->insertarPunto(10,10);
-            objeto->insertarPunto(10,11);
-            objeto->insertarPunto(11,10);
-            objeto->insertarPunto(11,11);
-            objeto->insertarPunto(12,1);
-            objeto->insertarPunto(0,10);
-            objeto->insertarPunto(0,1);
-
-
-            objeto->imprimirNodo();
-            objeto->getPuntos()->imprimir();
-
         } else {
             //Regresar al ménu principal
             limpiarVentana();

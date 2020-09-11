@@ -26,5 +26,15 @@ void Nodo_objeto::imprimirNodo(){
 }
 
 string Nodo_objeto::getNodoGraphviz(){
-    return "";
+    string temp = "";
+
+    temp += "\"n" + to_string(this->getIdentificador()) + "\" [ label = \"[" + to_string(this->getIdentificador()) + "] " + this->getNombre() + "\nLetra: " + this->getLetra() + "\nColor: " + this->getColor() + "\" ];\n";
+
+    if(this->izquierda != NULL)
+        temp += "\"n" + to_string(this->getIdentificador()) + "\" -> \"n" + to_string(this->getIzquierda()->getIdentificador()) + "\";\n";
+
+    if(this->derecha != NULL)
+        temp += "\"n" + to_string(this->getIdentificador()) + "\" -> \"n" + to_string(this->getDerecha()->getIdentificador()) + "\";\n";
+
+    return temp;
 }
