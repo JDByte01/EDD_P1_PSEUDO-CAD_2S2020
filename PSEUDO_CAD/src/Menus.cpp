@@ -51,26 +51,7 @@ void Menus::menuCargarLibrerias(){
 
             system("pause");
 
-            //Test
-            objeto = new Nodo_objeto();
-            objeto->setIdentificador(1);
-            objeto->setNombre("prueba");
-            objeto->setLetra("P");
-            objeto->setColor("#C4C4C4");
 
-
-
-            objeto->insertarPunto(10,10);
-            objeto->insertarPunto(10,11);
-            objeto->insertarPunto(11,10);
-            objeto->insertarPunto(11,11);
-            objeto->insertarPunto(12,1);
-            objeto->insertarPunto(0,10);
-            objeto->insertarPunto(0,1);
-
-
-            objeto->imprimirNodo();
-            objeto->getPuntos()->imprimir();
 
         } else {
             //Regresar al ménu principal
