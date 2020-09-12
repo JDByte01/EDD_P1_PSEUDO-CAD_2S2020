@@ -1,13 +1,26 @@
 #ifndef NODO_MATRIZ_H
 #define NODO_MATRIZ_H
 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+/*
+ * Author: KByteGt
+ * Estructura de Datos
+ * 2do Semestre 2020
+ */
+
 
 class Nodo_matriz
 {
     public:
         Nodo_matriz();
+        Nodo_matriz(string letra, string color, int x, int y);
         virtual ~Nodo_matriz();
          //Get
+        string getId(){ return this->id; }
         string getLetra(){ return this->letra; }
         string getColor(){ return this->color; }
         int getX(){ return this->x; }
@@ -17,8 +30,15 @@ class Nodo_matriz
         Nodo_matriz* getDerecha(){ return this->derecha; }
         Nodo_matriz* getIzquierda(){ return this->izquierda; }
         //Set
-        void setLetra(string letra)
-
+        void setId(string id){ this->id = id; }
+        void setLetra(string l){ this->letra = l; }
+        void setColor(string c){ this->color = c; }
+        void setX(int x){ this->x = x; }
+        void setY(int y){ this->y = y; }
+        void setArriba(Nodo_matriz* n){ this->arriba = n; }
+        void setAbajo(Nodo_matriz* n){ this->abajo = n; }
+        void setDerecha(Nodo_matriz* n){ this->derecha = n; }
+        void setIzquierda(Nodo_matriz* n){ this->izquierda = n; }
         //Otros
         string getNodoGraphviz();
         string getRutaGraphviz();
@@ -26,6 +46,7 @@ class Nodo_matriz
     protected:
 
     private:
+        string id; //N + letra + x + y
         string letra;
         string color;
         int x;

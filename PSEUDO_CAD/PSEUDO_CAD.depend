@@ -10,7 +10,7 @@
 	<iostream>
 	<fstream>
 
-1598504271 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_puntos.cpp
+1599909609 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_puntos.cpp
 	"Lista_puntos.h"
 
 1598499577 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_puntos.h
@@ -27,7 +27,7 @@
 	<Lista_puntos.h>
 	<iostream>
 
-1599901993 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
+1599909903 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
 	"Nodo_objeto.h"
 
 1599907625 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
@@ -45,10 +45,10 @@
 	<ABB_Lib.h>
 	<iostream>
 
-1599907348 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1599909620 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
-1599908329 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
+1599909570 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
 	"Archivo.h"
 
 1599907156 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\archivo.h
