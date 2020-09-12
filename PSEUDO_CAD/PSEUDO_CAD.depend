@@ -1,11 +1,14 @@
 # depslib dependency file v1.0
-1599809267 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1599901684 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
 	<ABB_Lib.h>
 	<Nodo_objeto.h>
+	<Archivo.h>
+	<nlohmann/json.hpp>
 	<iostream>
+	<fstream>
 
 1598504271 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_puntos.cpp
 	"Lista_puntos.h"
@@ -20,17 +23,17 @@
 1598504309 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_coordenada.cpp
 	"Nodo_coordenada.h"
 
-1598506026 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_objeto.h
+1599901759 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_objeto.h
 	<Lista_puntos.h>
 	<iostream>
 
-1599809151 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
+1599901993 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
 	"Nodo_objeto.h"
 
-1599809068 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
+1599902019 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
 	"ABB_lib.h"
 
-1599809018 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_lib.h
+1599810340 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_lib.h
 	<Nodo_objeto.h>
 	<iostream>
 
@@ -38,6 +41,14 @@
 	<Nodo_objeto.h>
 	<iostream>
 
-1599804117 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1599811225 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
+
+1599898130 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
+	"Archivo.h"
+
+1599897963 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\archivo.h
+	<nlohmann/json.hpp>
+	<fstream>
+	<iostream>
 

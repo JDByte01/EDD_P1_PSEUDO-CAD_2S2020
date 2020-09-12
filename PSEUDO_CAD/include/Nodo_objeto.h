@@ -6,6 +6,13 @@
 
 using namespace std;
 
+/*
+ * Author: KByteGt
+ * Estructura de Datos
+ * 2do Semestre 2020
+ */
+
+
 class Nodo_objeto
 {
     public:
@@ -34,6 +41,7 @@ class Nodo_objeto
         void insertarPunto(int x, int y);
         string getNodoGraphviz();
         void imprimirNodo();
+        void imprimirPuntos();
 
 
     private:

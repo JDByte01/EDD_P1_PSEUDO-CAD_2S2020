@@ -6,18 +6,80 @@
 #include <ABB_Lib.h>
 #include <Nodo_objeto.h>
 
+//Archivos
+#include <Archivo.h>
+
+//Libreria para JSON
+#include <nlohmann/json.hpp>
+
 #include <iostream>
+#include <fstream>
 
 using namespace std;
+using json=nlohmann::json;
 
 /*
  * Author: KByteGt
  * Estructura de Datos
  * 2do Semestre 2020
  */
-void test(){
 
+void testJSON(){
+    string archivo = "./prueba.json";
+    ifstream reader(archivo);
+    json j;
+    reader>>j;
+    reader.close();
+
+    cout << j.size() << endl;
+    cout << j["personas"].size() << endl;
+
+    for(int i = 0; i < j["personas"].size(); i++){
+        cout << j["personas"][i]["nombre"] << endl;
+    }
+
+    //int i = 0;
+    //while(j["personas"][i] != "null"){
+    //    cout << j["personas"][i]["nombre"] << endl;
+    //    i++;
+    //}
+
+}
+void test(){
+    string ruta = "../entradas/entrada_lib3.json";
+    json lib;
+
+    Archivo* archivo = new Archivo();
     ABB_lib* libreria = new ABB_lib();
+    Nodo_objeto* ob;
+
+    lib = archivo->leerJSON(ruta);
+
+    cout << "Archivo Json leido, objetos: " << lib["Libreria"].size() << endl;
+
+    for(int i = 0; i < lib["Libreria"].size(); i++){
+        ob = new Nodo_objeto();
+        ob->setIdentificador(lib["Libreria"][i]["identificador"]);
+        ob->setNombre(lib["Libreria"][i]["nombre"]);
+        ob->setLetra(lib["Libreria"][i]["letra"]);
+        ob->setColor(lib["Libreria"][i]["color"]);
+
+        cout << "Puntos: " << lib["Libreria"][i]["puntos"].size() << endl;
+
+        for(int j = 0; j < lib["Libreria"][i]["puntos"].size(); j++){
+             ob->insertarPunto(lib["Libreria"][i]["puntos"][j]["x"],lib["Libreria"][i]["puntos"][j]["y"]);
+        }
+
+        libreria->insertar(ob);
+
+        cout << to_string(i) <<" -> [" << lib["Libreria"][i]["identificador"] << "] " << lib["Libreria"][i]["nombre"]<< endl;
+    }
+    system("pause");
+    libreria->imprimir();
+    system("pause");
+    archivo->generarEstructura("ABB_libreria","./archivos",libreria->getGraphviz("Libreria"));
+    /*
+
     Nodo_objeto* ob1 = new Nodo_objeto();
     Nodo_objeto* ob2 = new Nodo_objeto();
     Nodo_objeto* ob3 = new Nodo_objeto();
@@ -78,7 +140,11 @@ void test(){
     cout << libreria->getGraphviz("Libreria") << endl;
 
 
+    //Crear archivo .dot
 
+    Archivo* archivo = new Archivo();
+    archivo->generarEstructura("ABB_libreria","./archivos",libreria->getGraphviz("Libreria"));
+    */
 }
 
 int main(){
@@ -87,6 +153,7 @@ int main(){
     //m->menuPrincipal();
 
     test();
+    //testJSON();
 
     return 0;
 

@@ -179,7 +179,7 @@ ABB_lib::~ABB_lib()
     if(estaVacio()){
        cout << " | -> ABB vacio..." << endl;
     } else {
-        cout << " |%%%| Librerias deisponibles |%%%|" << endl;
+        cout << " |%%%| Librerias disponibles |%%%|" << endl;
         imprimir(this->raiz);
     }
   }
@@ -202,6 +202,7 @@ ABB_lib::~ABB_lib()
 
   string ABB_lib::getGraphviz(string nombre){
     //Obtener arbol en graphviz
+    g_nodes = "";
 
     g_nodes += graphviz(this->raiz, "");
     return graphIn + g_initA + nombre + g_initB + g_node + g_nodes + "}";

@@ -1,0 +1,14 @@
+{
+    "personas":[
+        {
+            "nombre":"Daniel",
+            "edad":23
+        },
+        {
+            "nombre":"Darlin",
+            "edad":25
+        }
+    ],
+    "curso":"EDD"
+
+}
