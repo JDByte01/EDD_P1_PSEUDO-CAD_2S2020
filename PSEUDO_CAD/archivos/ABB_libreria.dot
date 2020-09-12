@@ -2,383 +2,123 @@ digraph G{
 ratio = "auto";
 label = "ABB - Libreria";
 node [fontsize = 12, shape = box];
-"n12" [ label = "[12] labore
-Letra: D
-Color: #F3969D" ];
-"n12" -> "n47";
-"n19" [ label = "[19] ullamco
-Letra: I
-Color: #EC7D7E" ];
-"n19" -> "n33";
-"n33" [ label = "[33] nostrud
-Letra: I
-Color: #983B29" ];
-"n47" [ label = "[47] est
-Letra: B
-Color: #DD158C" ];
-"n47" -> "n19";
-"n50" [ label = "[50] tempor
-Letra: H
-Color: #06F5C1" ];
-"n50" -> "n12";
-"n50" -> "n54";
-"n54" [ label = "[54] qui
-Letra: B
-Color: #9381A9" ];
-"n54" -> "n102";
-"n56" [ label = "[56] velit
-Letra: B
-Color: #7DE3B8" ];
-"n56" -> "n60";
-"n60" [ label = "[60] ut
-Letra: L
-Color: #CEA3A4" ];
-"n60" -> "n64";
-"n64" [ label = "[64] aliqua
-Letra: J
-Color: #EE873A" ];
-"n102" [ label = "[102] ex
-Letra: D
-Color: #1BA6CD" ];
-"n102" -> "n56";
-"n102" -> "n181";
-"n110" [ label = "[110] ad
-Letra: B
-Color: #8ABEA6" ];
-"n110" -> "n146";
-"n111" [ label = "[111] mollit
-Letra: K
-Color: #7A2253" ];
-"n111" -> "n112";
-"n112" [ label = "[112] nisi
+"n15" [ label = "[15] mollit
 Letra: F
-Color: #E77DE3" ];
-"n127" [ label = "[127] ipsum
-Letra: I
-Color: #FC77B3" ];
-"n127" -> "n111";
-"n127" -> "n143";
-"n140" [ label = "[140] amet
-Letra: H
-Color: #F34AFC" ];
-"n143" [ label = "[143] sit
-Letra: I
-Color: #C3FEDD" ];
-"n143" -> "n140";
-"n146" [ label = "[146] sint
-Letra: M
-Color: #FFD64D" ];
-"n146" -> "n127";
-"n146" -> "n164";
-"n164" [ label = "[164] culpa
-Letra: L
-Color: #D2ADB3" ];
-"n181" [ label = "[181] deserunt
-Letra: H
-Color: #F1264B" ];
-"n181" -> "n110";
-"n181" -> "n182";
-"n182" [ label = "[182] magna
-Letra: L
-Color: #076ABA" ];
-"n182" -> "n280";
-"n198" [ label = "[198] sit
+Color: #7D9959" ];
+"n74" [ label = "[74] deserunt
+Letra: F
+Color: #49D65B" ];
+"n74" -> "n15";
+"n99" [ label = "[99] excepteur
+Letra: E
+Color: #F44640" ];
+"n99" -> "n74";
+"n99" -> "n783";
+"n114" [ label = "[114] qui
 Letra: C
-Color: #1002BC" ];
-"n222" [ label = "[222] magna
-Letra: L
-Color: #ED2079" ];
-"n222" -> "n198";
-"n222" -> "n232";
-"n232" [ label = "[232] commodo
+Color: #C79B3E" ];
+"n114" -> "n403";
+"n157" [ label = "[157] dolore
+Letra: N
+Color: #493C23" ];
+"n169" [ label = "[169] cillum
+Letra: D
+Color: #C57288" ];
+"n169" -> "n157";
+"n169" -> "n199";
+"n199" [ label = "[199] culpa
+Letra: J
+Color: #2F5DAB" ];
+"n199" -> "n291";
+"n291" [ label = "[291] cupidatat
+Letra: D
+Color: #726296" ];
+"n291" -> "n385";
+"n336" [ label = "[336] eiusmod
+Letra: J
+Color: #D67056" ];
+"n385" [ label = "[385] nostrud
+Letra: N
+Color: #26CEDF" ];
+"n385" -> "n336";
+"n401" [ label = "[401] magna
+Letra: A
+Color: #1373DA" ];
+"n401" -> "n169";
+"n403" [ label = "[403] mollit
+Letra: E
+Color: #BD91E1" ];
+"n403" -> "n401";
+"n403" -> "n406";
+"n406" [ label = "[406] cillum
 Letra: G
-Color: #947CEE" ];
-"n232" -> "n276";
-"n276" [ label = "[276] ullamco
-Letra: K
-Color: #65867A" ];
-"n280" [ label = "[280] duis
+Color: #185007" ];
+"n406" -> "n468";
+"n430" [ label = "[430] velit
+Letra: N
+Color: #D93C38" ];
+"n439" [ label = "[439] mollit
+Letra: M
+Color: #4DFAC5" ];
+"n439" -> "n430";
+"n468" [ label = "[468] tempor
+Letra: N
+Color: #D098B8" ];
+"n468" -> "n439";
+"n468" -> "n745";
+"n491" [ label = "[491] officia
 Letra: C
-Color: #B6FB35" ];
-"n280" -> "n222";
-"n280" -> "n299";
-"n293" [ label = "[293] ex
-Letra: D
-Color: #B5568C" ];
-"n299" [ label = "[299] velit
-Letra: D
-Color: #DF7EA8" ];
-"n299" -> "n293";
-"n299" -> "n305";
-"n305" [ label = "[305] proident
+Color: #1355DB" ];
+"n524" [ label = "[524] eiusmod
 Letra: M
-Color: #EB655D" ];
-"n305" -> "n308";
-"n308" [ label = "[308] amet
-Letra: H
-Color: #E2EECC" ];
-"n311" [ label = "[311] incididunt
-Letra: C
-Color: #A0C832" ];
-"n311" -> "n50";
-"n311" -> "n464";
-"n319" [ label = "[319] consequat
-Letra: F
-Color: #BBDC90" ];
-"n319" -> "n379";
-"n341" [ label = "[341] quis
-Letra: I
-Color: #AE8DE7" ];
-"n359" [ label = "[359] reprehenderit
-Letra: C
-Color: #8251CD" ];
-"n359" -> "n341";
-"n359" -> "n375";
-"n375" [ label = "[375] incididunt
-Letra: K
-Color: #28DF31" ];
-"n379" [ label = "[379] excepteur
-Letra: G
-Color: #625F32" ];
-"n379" -> "n359";
-"n397" [ label = "[397] ut
-Letra: J
-Color: #2FF9CF" ];
-"n397" -> "n319";
-"n397" -> "n405";
-"n402" [ label = "[402] proident
-Letra: H
-Color: #2E18F8" ];
-"n405" [ label = "[405] qui
-Letra: M
-Color: #F577E2" ];
-"n405" -> "n402";
-"n417" [ label = "[417] ad
-Letra: B
-Color: #1A2D32" ];
-"n417" -> "n397";
-"n417" -> "n419";
-"n419" [ label = "[419] veniam
-Letra: E
-Color: #A44CAC" ];
-"n419" -> "n443";
-"n434" [ label = "[434] ut
-Letra: F
-Color: #D90AB0" ];
-"n434" -> "n440";
-"n440" [ label = "[440] nostrud
-Letra: E
-Color: #FB5422" ];
-"n443" [ label = "[443] dolor
-Letra: F
-Color: #2AAE29" ];
-"n443" -> "n434";
-"n460" [ label = "[460] ex
-Letra: E
-Color: #1F6381" ];
-"n460" -> "n417";
-"n460" -> "n462";
-"n462" [ label = "[462] commodo
-Letra: F
-Color: #890378" ];
-"n464" [ label = "[464] laborum
-Letra: E
-Color: #14F64A" ];
-"n464" -> "n460";
-"n464" -> "n524";
-"n468" [ label = "[468] consectetur
-Letra: J
-Color: #2A8534" ];
-"n469" [ label = "[469] esse
-Letra: J
-Color: #E333BF" ];
-"n469" -> "n468";
-"n469" -> "n508";
-"n495" [ label = "[495] excepteur
-Letra: A
-Color: #4AE3BF" ];
-"n508" [ label = "[508] pariatur
-Letra: G
-Color: #22D1C0" ];
-"n508" -> "n495";
-"n508" -> "n520";
-"n520" [ label = "[520] excepteur
-Letra: K
-Color: #FACDC8" ];
-"n524" [ label = "[524] officia
-Letra: E
-Color: #643F2F" ];
-"n524" -> "n469";
-"n524" -> "n528";
-"n528" [ label = "[528] non
-Letra: M
-Color: #C900E5" ];
-"n532" [ label = "[532] laboris
+Color: #CC4C92" ];
+"n524" -> "n491";
+"n524" -> "n647";
+"n647" [ label = "[647] laborum
 Letra: N
-Color: #A4E11B" ];
-"n532" -> "n311";
-"n532" -> "n888";
-"n533" [ label = "[533] sit
-Letra: M
-Color: #3075A1" ];
-"n533" -> "n562";
-"n562" [ label = "[562] enim
-Letra: N
-Color: #A7A6B1" ];
-"n562" -> "n593";
-"n593" [ label = "[593] amet
-Letra: K
-Color: #C12FB6" ];
-"n593" -> "n601";
-"n601" [ label = "[601] amet
-Letra: C
-Color: #D96E13" ];
-"n602" [ label = "[602] nulla
-Letra: B
-Color: #7BCCA8" ];
-"n602" -> "n533";
-"n602" -> "n657";
-"n612" [ label = "[612] aliqua
-Letra: I
-Color: #973931" ];
-"n612" -> "n637";
-"n637" [ label = "[637] eu
-Letra: B
-Color: #E2E552" ];
-"n645" [ label = "[645] ea
-Letra: N
-Color: #6FCA32" ];
-"n645" -> "n612";
-"n645" -> "n656";
-"n656" [ label = "[656] enim
-Letra: A
-Color: #8C55E5" ];
-"n657" [ label = "[657] culpa
-Letra: D
-Color: #70BB5D" ];
-"n657" -> "n645";
-"n689" [ label = "[689] amet
-Letra: H
-Color: #B6CF30" ];
-"n689" -> "n602";
-"n689" -> "n843";
-"n694" [ label = "[694] consequat
-Letra: I
-Color: #8624AA" ];
-"n694" -> "n702";
-"n702" [ label = "[702] esse
-Letra: M
-Color: #37A496" ];
-"n704" [ label = "[704] nostrud
-Letra: E
-Color: #1446CD" ];
-"n704" -> "n694";
-"n704" -> "n709";
-"n708" [ label = "[708] minim
-Letra: N
-Color: #490A85" ];
-"n709" [ label = "[709] proident
-Letra: F
-Color: #447D9C" ];
-"n709" -> "n708";
-"n721" [ label = "[721] pariatur
-Letra: H
-Color: #856329" ];
-"n721" -> "n704";
-"n721" -> "n753";
-"n740" [ label = "[740] labore
-Letra: A
-Color: #B03175" ];
-"n740" -> "n748";
-"n748" [ label = "[748] ullamco
-Letra: J
-Color: #BFF9DC" ];
-"n753" [ label = "[753] eu
-Letra: K
-Color: #854FEF" ];
-"n753" -> "n740";
-"n753" -> "n758";
-"n755" [ label = "[755] occaecat
-Letra: F
-Color: #85A68A" ];
-"n758" [ label = "[758] nostrud
-Letra: D
-Color: #AEB302" ];
-"n758" -> "n755";
-"n766" [ label = "[766] in
-Letra: N
-Color: #8803FF" ];
-"n766" -> "n721";
-"n766" -> "n784";
-"n784" [ label = "[784] dolore
-Letra: J
-Color: #4CD99C" ];
-"n784" -> "n825";
-"n788" [ label = "[788] nulla
-Letra: D
-Color: #E4CE24" ];
-"n825" [ label = "[825] quis
-Letra: E
-Color: #FE9188" ];
-"n825" -> "n788";
-"n825" -> "n837";
-"n837" [ label = "[837] magna
-Letra: I
-Color: #FA47C0" ];
-"n843" [ label = "[843] in
-Letra: B
-Color: #EDBA28" ];
-"n843" -> "n766";
-"n843" -> "n859";
-"n859" [ label = "[859] reprehenderit
-Letra: M
-Color: #12F7E2" ];
-"n859" -> "n874";
-"n868" [ label = "[868] laborum
-Letra: N
-Color: #C0E12B" ];
-"n874" [ label = "[874] qui
-Letra: K
-Color: #A6F6B9" ];
-"n874" -> "n868";
-"n874" -> "n879";
-"n879" [ label = "[879] qui
-Letra: J
-Color: #7CD8DF" ];
-"n888" [ label = "[888] excepteur
-Letra: E
-Color: #1F4A0B" ];
-"n888" -> "n689";
-"n888" -> "n971";
-"n893" [ label = "[893] consequat
-Letra: C
-Color: #67DAB8" ];
-"n893" -> "n926";
-"n920" [ label = "[920] sit
-Letra: J
-Color: #31139C" ];
-"n920" -> "n923";
-"n923" [ label = "[923] aliqua
-Letra: D
-Color: #5D0C54" ];
-"n926" [ label = "[926] laboris
-Letra: N
-Color: #7AB5C1" ];
-"n926" -> "n920";
-"n932" [ label = "[932] labore
-Letra: A
-Color: #02C2E8" ];
-"n932" -> "n893";
-"n932" -> "n941";
-"n941" [ label = "[941] non
-Letra: A
-Color: #7B1447" ];
-"n971" [ label = "[971] sunt
+Color: #F4BE36" ];
+"n647" -> "n726";
+"n726" [ label = "[726] quis
 Letra: L
-Color: #D95907" ];
-"n971" -> "n932";
-"n971" -> "n986";
-"n986" [ label = "[986] et
-Letra: A
-Color: #98D3DB" ];
+Color: #0D6742" ];
+"n745" [ label = "[745] adipisicing
+Letra: B
+Color: #6E0802" ];
+"n745" -> "n524";
+"n745" -> "n751";
+"n751" [ label = "[751] ipsum
+Letra: G
+Color: #932993" ];
+"n751" -> "n759";
+"n759" [ label = "[759] anim
+Letra: C
+Color: #6C1F2F" ];
+"n783" [ label = "[783] nostrud
+Letra: K
+Color: #B0292C" ];
+"n783" -> "n114";
+"n801" [ label = "[801] eiusmod
+Letra: M
+Color: #6477EA" ];
+"n801" -> "n99";
+"n801" -> "n833";
+"n815" [ label = "[815] dolore
+Letra: M
+Color: #709C46" ];
+"n833" [ label = "[833] irure
+Letra: K
+Color: #E4FE4A" ];
+"n833" -> "n815";
+"n833" -> "n911";
+"n863" [ label = "[863] consectetur
+Letra: L
+Color: #71E1A7" ];
+"n863" -> "n892";
+"n892" [ label = "[892] officia
+Letra: H
+Color: #E11EDA" ];
+"n911" [ label = "[911] sunt
+Letra: I
+Color: #5DFBDC" ];
+"n911" -> "n863";
 }

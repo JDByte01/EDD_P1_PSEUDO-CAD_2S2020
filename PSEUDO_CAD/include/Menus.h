@@ -1,10 +1,14 @@
 #ifndef MENUS_H
 #define MENUS_H
 #include <Nodo_objeto.h>
+#include <nlohmann/json.hpp>
+#include <Archivo.h>
+#include <ABB_Lib.h>
 
 #include <iostream>
 
 using namespace std;
+using json = nlohmann::json;
 
 /*
  * Author: KByteGt
@@ -38,6 +42,8 @@ class Menus
         string rutaJsonLib;
 
         //Estructuras
+        Archivo* archivo;
+        ABB_lib* librerias;
 
 
         //Test

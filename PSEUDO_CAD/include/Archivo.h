@@ -2,7 +2,8 @@
 #define ARCHIVO_H
 
 #include <nlohmann/json.hpp>
-
+#include <sys/stat.h>
+#include <unistd.h>
 #include <fstream>
 #include <iostream>
 
@@ -25,12 +26,15 @@ class Archivo
         void crearGrafo(string nombre, string ruta);
         void abrirImg(string nombre, string ruta);
 
-        void generarEstructura(string nombre, string ruta, string txt);
-        json leerJSON(string ruta);
+        void generarEstructura(string nombre, string txt);
+        json leerJSON(string& ruta); //por referencia
+        bool existe(string& ruta); //por referencia
 
     protected:
 
     private:
+        string carpeta = "./archivos/";
+
 };
 
 #endif // ARCHIVO_H

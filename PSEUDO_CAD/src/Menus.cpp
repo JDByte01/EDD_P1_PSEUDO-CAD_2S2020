@@ -2,6 +2,11 @@
 
 Menus::Menus()
 {
+    //Estructuras
+    archivo = new Archivo();
+    librerias = new ABB_lib();
+
+
     limpiarVentana();
 }
 
@@ -43,16 +48,24 @@ void Menus::menuCargarLibrerias(){
         cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%%%%%%|  Ruta del archivo JSON  |%%%%%%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
-        cout << " |> ";
+        cout << " |> C:/ ";
         cin >> rutaJsonLib;
 
         if(rutaJsonLib != "0"){
+            rutaJsonLib = "C:/" + rutaJsonLib;
             cout << " | Ruta ingresada: " << rutaJsonLib << endl;
 
-            system("pause");
+            if(archivo->existe(rutaJsonLib)){
+                //Existe el archivo
+                librerias->cargarJSON(archivo->leerJSON(rutaJsonLib));
 
-
-
+                //Regresar a menu principal
+                system("pause");
+                flagMenuCargarLibreria = false;
+            } else {
+                //No existe el archivo
+                cout << " |> **ERROR: Ruta incorrecta..." << endl;
+            }
         } else {
             //Regresar al ménu principal
             limpiarVentana();

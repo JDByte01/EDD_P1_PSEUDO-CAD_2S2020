@@ -1,10 +1,12 @@
 #ifndef ABB_LIB_H
 #define ABB_LIB_H
 #include <Nodo_objeto.h>
+#include <nlohmann/json.hpp>
 
 #include <iostream>
 
 using namespace std;
+using json = nlohmann::json;
 
 /* Libreria
  * Arbol binario de busqueda
@@ -28,6 +30,8 @@ class ABB_lib
 
         int getSize(){ return this->objetos; }
         string getGraphviz(string nombre);
+
+        void cargarJSON(json lib);
 
     private:
         Nodo_objeto* raiz;

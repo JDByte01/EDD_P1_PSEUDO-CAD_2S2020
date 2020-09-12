@@ -27,6 +27,16 @@ void Archivo::abrirImg(string nombre, string ruta){
     system(("nohup display" + ruta + "\\" + nombre + ".jpeg &").c_str());
 }
 
+/** \brief Verifiacar la existencia de un archivo
+ *
+ * \param string ruta del archivo
+ * \return bool estado
+ *
+ */
+
+ bool Archivo::existe(string& ruta){
+   return (access(ruta.c_str(), F_OK) != -1);
+ }
 
 /** \brief Generar grafica de estructuras
  *
@@ -37,9 +47,9 @@ void Archivo::abrirImg(string nombre, string ruta){
  *
  */
 
-void Archivo::generarEstructura(string nombre, string ruta, string txt){
+void Archivo::generarEstructura(string nombre, string txt){
     //Crear archivo
-    string archivo = ruta + "//" + nombre;
+    string archivo = this->carpeta + nombre;
 
     cout << "Generando archivo .dot" << endl;
 
@@ -54,7 +64,8 @@ void Archivo::generarEstructura(string nombre, string ruta, string txt){
     cout << "Abriendo imagen...." << endl;
 
     //system(("nohup display " + archivo + ".jpeg &").c_str());
-    system(("display " + ruta + "\\" + nombre + " &").c_str());
+    //system(("display " + archivo + " &").c_str());
+
 }
 
 /** \brief Leer archivo JSON
@@ -64,12 +75,18 @@ void Archivo::generarEstructura(string nombre, string ruta, string txt){
  *
  */
 
-json Archivo::leerJSON(string ruta){
-    //Leer archivo
-    ifstream r(ruta);
-    json j;
-    r >> j;
-    r.close();
+json Archivo::leerJSON(string& ruta){
 
-    return j;
+    if(existe(ruta)){
+        //Leer archivo
+        ifstream r(ruta);
+        json j;
+        r >> j;
+        r.close();
+
+        return j;
+    } else {
+        return NULL;
+    }
+
 }

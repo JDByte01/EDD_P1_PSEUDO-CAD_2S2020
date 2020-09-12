@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1599901684 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1599907365 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -30,25 +30,31 @@
 1599901993 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
 	"Nodo_objeto.h"
 
-1599902019 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
+1599903216 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
 	"ABB_lib.h"
 
-1599810340 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_lib.h
+1599903143 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_lib.h
 	<Nodo_objeto.h>
+	<nlohmann/json.hpp>
 	<iostream>
 
-1599800289 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
+1599903716 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
 	<Nodo_objeto.h>
+	<nlohmann/json.hpp>
+	<Archivo.h>
+	<ABB_Lib.h>
 	<iostream>
 
-1599811225 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1599907348 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
-1599898130 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
+1599907166 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
 	"Archivo.h"
 
-1599897963 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\archivo.h
+1599907156 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\archivo.h
 	<nlohmann/json.hpp>
+	<sys/stat.h>
+	<unistd.h>
 	<fstream>
 	<iostream>
 

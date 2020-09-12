@@ -70,7 +70,7 @@ ABB_lib::~ABB_lib()
   * PARAMETROS INT ID
   */
 
-  bool ABB_lib::existe(int id){
+    bool ABB_lib::existe(int id){
     if(estaVacio()){
         return false;
     } else {
@@ -219,3 +219,33 @@ ABB_lib::~ABB_lib()
 
     return txt;
   }
+
+  /** \brief Cargar datos de estructura JSON
+   *
+   * \param json Objeto JSON
+   * \return
+   *
+   */
+
+void ABB_lib::cargarJSON(json lib){
+    Nodo_objeto* ob;
+
+    for(int i = 0; i < lib["Libreria"].size(); i++){
+        ob = new Nodo_objeto();
+        ob->setIdentificador(lib["Libreria"][i]["identificador"]);
+        ob->setNombre(lib["Libreria"][i]["nombre"]);
+        ob->setLetra(lib["Libreria"][i]["letra"]);
+        ob->setColor(lib["Libreria"][i]["color"]);
+
+        for(int j = 0; j < lib["Libreria"][i]["puntos"].size(); j++){
+             ob->insertarPunto(lib["Libreria"][i]["puntos"][j]["x"],lib["Libreria"][i]["puntos"][j]["y"]);
+        }
+
+        this->insertar(ob);
+    }
+
+    cout << " | Archivo JSON leido exitosamente!" << endl;
+    cout << " | Objetos leidos: " << lib["Libreria"].size() << endl;
+    //cout << to_string(i) <<" -> [" << lib["Libreria"][i]["identificador"] << "] " << lib["Libreria"][i]["nombre"]<< endl;
+}
+

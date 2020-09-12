@@ -46,15 +46,22 @@ void testJSON(){
 
 }
 void test(){
-    string ruta = "../entradas/entrada_lib3.json";
+    string ruta = "../entradas/entrada_lib2.json";
     json lib;
 
     Archivo* archivo = new Archivo();
     ABB_lib* libreria = new ABB_lib();
     Nodo_objeto* ob;
 
+    cout << archivo->existe(ruta) << endl;
+
+
     lib = archivo->leerJSON(ruta);
 
+    if(lib != NULL)
+        libreria->cargarJSON(lib);
+
+    /*
     cout << "Archivo Json leido, objetos: " << lib["Libreria"].size() << endl;
 
     for(int i = 0; i < lib["Libreria"].size(); i++){
@@ -74,10 +81,12 @@ void test(){
 
         cout << to_string(i) <<" -> [" << lib["Libreria"][i]["identificador"] << "] " << lib["Libreria"][i]["nombre"]<< endl;
     }
+
+    */
     system("pause");
     libreria->imprimir();
     system("pause");
-    archivo->generarEstructura("ABB_libreria","./archivos",libreria->getGraphviz("Libreria"));
+    archivo->generarEstructura("ABB_libreria",libreria->getGraphviz("Libreria"));
     /*
 
     Nodo_objeto* ob1 = new Nodo_objeto();
@@ -148,11 +157,11 @@ void test(){
 }
 
 int main(){
-    //Menus* m = new Menus();
-    //m->encabezado();
-    //m->menuPrincipal();
+    Menus* m = new Menus();
+    m->encabezado();
+    m->menuPrincipal();
 
-    test();
+    //test();
     //testJSON();
 
     return 0;
