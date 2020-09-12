@@ -35,7 +35,12 @@ void Archivo::abrirImg(string nombre, string ruta){
  */
 
  bool Archivo::existe(string& ruta){
-   return (access(ruta.c_str(), F_OK) != -1);
+    if(ruta.find(".json") != string::npos){
+        return (access(ruta.c_str(), F_OK) != -1);
+    } else {
+        return false;
+    }
+
  }
 
 /** \brief Generar grafica de estructuras
@@ -51,17 +56,17 @@ void Archivo::generarEstructura(string nombre, string txt){
     //Crear archivo
     string archivo = this->carpeta + nombre;
 
-    cout << "Generando archivo .dot" << endl;
+    cout << " | Generando archivo .dot" << endl;
 
     ofstream fs(archivo + ".dot");
     fs << txt << endl;
     fs.close();
 
-    cout << "Compilando dot a JPEG" << endl;
+    cout << " | Compilando dot a JPEG" << endl;
 
     system(("dot -Tjpeg " + archivo + ".dot -o " + archivo + ".jpeg").c_str());
 
-    cout << "Abriendo imagen...." << endl;
+    cout << " | Imagen generada exitosamente...." << endl;
 
     //system(("nohup display " + archivo + ".jpeg &").c_str());
     //system(("display " + archivo + " &").c_str());

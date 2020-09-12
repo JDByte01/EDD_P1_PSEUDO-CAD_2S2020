@@ -54,7 +54,7 @@ void Lista_puntos::vaciar(){
 
 void Lista_puntos::imprimir(){
     if(this->inicio != NULL){
-        cout << " Lista de puntos: "<< endl;
+        cout << " | Lista de puntos: "<< endl;
         Nodo_coordenada* temp = this->inicio;
         while(temp->getSiguiente() != NULL){
             cout << "(" << temp->getX() << ", " << temp->getY() << ")" << endl;
@@ -62,6 +62,6 @@ void Lista_puntos::imprimir(){
         }
         cout << "(" << temp->getX() << ", " << temp->getY() << ")" << endl;
     } else {
-        cout << "Lista de puntos vacia..." << endl;
+        cout << " | Lista de puntos vacia..." << endl;
     }
 }

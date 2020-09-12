@@ -1,0 +1,20 @@
+digraph G{
+ratio = "auto";
+label = "ABB - Librerias";
+node [fontsize = 12, shape = box];
+"n1" [ label = "[1] Sofa
+Letra: S
+Color: #FDB546" ];
+"n1" -> "n2";
+"n2" [ label = "[2] Television
+Letra: T
+Color: #E6E6E6" ];
+"n2" -> "n3";
+"n3" [ label = "[3] planta
+Letra: F
+Color: #50CB0A" ];
+"n3" -> "n4";
+"n4" [ label = "[4] mesa
+Letra: M
+Color: #0A18CB" ];
+}

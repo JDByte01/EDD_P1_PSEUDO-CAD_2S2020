@@ -22,8 +22,8 @@ void Nodo_objeto::insertarPunto(int x, int y){
 }
 
 void Nodo_objeto::imprimirNodo(){
-    cout << " ["<<this->identificador << "]Objeto: "<< this->nombre << " - " << this->letra << "("<<this->color<<")" << endl;
-    imprimirPuntos();
+    cout << " |-> ["<<this->identificador << "]Objeto: "<< this->nombre << endl;
+    //imprimirPuntos();
 }
 
 void Nodo_objeto::imprimirPuntos(){

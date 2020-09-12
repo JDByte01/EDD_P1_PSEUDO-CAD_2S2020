@@ -1,5 +1,7 @@
 #include "Menus.h"
 
+
+//Ruta Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/
 Menus::Menus()
 {
     //Estructuras
@@ -101,6 +103,14 @@ void Menus::menuReportes(){
                 break;
             case '2':
                 //Reporte Arbol binario de librerias
+                if(!librerias->estaVacio()){
+                    archivo->generarEstructura("ABB_Librerias", librerias->getGraphviz("Librerias"));
+                } else {
+                    cout << " | ABB - Librerias esta vacio..." << endl;
+                }
+
+                system("pause");
+                flagMenuReportes = false;
                 break;
             case '3':
                 //Reporte de proyectos ordenados por nivel (ASC)
@@ -116,6 +126,7 @@ void Menus::menuReportes(){
                 flagMenuReportes = false;
                 break;
             default:
+                limpiarVentana();
                 flagMenuReportes = true;
                 break;
         }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1599907365 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1599908877 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -30,7 +30,7 @@
 1599901993 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
 	"Nodo_objeto.h"
 
-1599903216 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
+1599907625 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_lib.cpp
 	"ABB_lib.h"
 
 1599903143 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_lib.h
@@ -48,7 +48,7 @@
 1599907348 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
-1599907166 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
+1599908329 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
 	"Archivo.h"
 
 1599907156 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\archivo.h
