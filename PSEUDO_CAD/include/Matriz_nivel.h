@@ -24,7 +24,7 @@ class Matriz_nivel
         //Otros
         void agregarPunto(int x, int y, string letra, string color);
 
-        bool verificarPunto(int x, int y, string l);
+        bool existePunto(int x, int y);
         int getIdPunto(int x, int y);
 
         string getGraphviz(string nombre);
