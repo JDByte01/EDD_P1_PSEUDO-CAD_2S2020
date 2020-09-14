@@ -30,7 +30,7 @@ class Nodo_matriz
         Nodo_matriz* getDerecha(){ return this->derecha; }
         Nodo_matriz* getIzquierda(){ return this->izquierda; }
         //Set
-        void setId(string id){ this->id = id; }
+        void setId(string l, int x, int y);
         void setLetra(string l){ this->letra = l; }
         void setColor(string c){ this->color = c; }
         void setX(int x){ this->x = x; }
