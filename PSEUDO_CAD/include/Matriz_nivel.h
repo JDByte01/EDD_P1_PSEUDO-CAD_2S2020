@@ -22,7 +22,7 @@ class Matriz_nivel
         virtual ~Matriz_nivel();
 
         //Otros
-        void agregarPunto(int x, int y, string letra, string color);
+        void agregarPunto(int x, int y, string letra, string color, int id);
 
         bool existePunto(int x, int y);
         int getIdPunto(int x, int y);
@@ -33,6 +33,7 @@ class Matriz_nivel
 
     private:
         Nodo_matriz* headers;
+        string dot, dotN, dotR, dotI;
 
         //Metodos
         void agregarEjeX(int x);

@@ -20,7 +20,7 @@ class Nodo_matriz
         Nodo_matriz(string letra, string color, int x, int y, int id);
         virtual ~Nodo_matriz();
          //Get
-        string getId(){ return this->id; }
+        int getId(){ return this->id; }
         string getLetra(){ return this->letra; }
         string getColor(){ return this->color; }
         int getX(){ return this->x; }
@@ -52,6 +52,7 @@ class Nodo_matriz
         string color;
         int x;
         int y;
+        string temp;
 
         Nodo_matriz* arriba;
         Nodo_matriz* abajo;
