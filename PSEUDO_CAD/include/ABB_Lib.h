@@ -16,42 +16,46 @@ using json = nlohmann::json;
 
 class ABB_lib
 {
-    public:
-        ABB_lib();
-        virtual ~ABB_lib();
+public:
+    ABB_lib();
+    virtual ~ABB_lib();
 
-        bool existe(int id);
-        Nodo_objeto* encontrar(int id);
-        void insertar(Nodo_objeto* n);
-        bool eliminar(int id);
-        bool estaVacio();
+    bool existe(int id);
+    Nodo_objeto* encontrar(int id);
+    void insertar(Nodo_objeto* n);
+    bool estaVacio();
 
-        void imprimir();
+    void imprimir();
 
-        int getSize(){ return this->objetos; }
-        string getGraphviz(string nombre);
+    int getSize()
+    {
+        return this->objetos;
+    }
+    string getGraphviz(string nombre);
 
-        void cargarJSON(json lib);
+    void cargarJSON(json lib);
 
-    private:
-        Nodo_objeto* raiz;
-        int objetos;
+    Nodo_objeto* getRaiz(){ return this->raiz; }
+    void setRaiz(Nodo_objeto* n){ this->raiz = n; }
 
-        //Variables graphviz
-        string graphIn = "digraph G{\n";
-        string g_initA = "ratio = \"auto\";\nlabel = \"ABB - ";
-        string g_initB = "\";\n";
-        string g_node = "node [fontsize = 12, shape = box];\n";
-        string g_nodes = "";
+private:
+    Nodo_objeto* raiz;
+    int objetos;
 
-        bool existe(Nodo_objeto* raiz, int id);
-        Nodo_objeto* encontrar(Nodo_objeto* raiz, int id);
-        void insertar(Nodo_objeto* raiz, Nodo_objeto* n);
-        bool eliminar(Nodo_objeto* raiz, int id);
+    //Variables graphviz
+    string graphIn = "digraph G{\n";
+    string g_initA = "ratio = \"auto\";\nlabel = \"ABB - ";
+    string g_initB = "\";\n";
+    string g_node = "node [fontsize = 12, shape = box];\n";
+    string g_nodes = "";
 
-        void imprimir(Nodo_objeto* raiz);
+    bool existe(Nodo_objeto* raiz, int id);
+    Nodo_objeto* encontrar(Nodo_objeto* raiz, int id);
+    void insertar(Nodo_objeto* raiz, Nodo_objeto* n);
 
-        string graphviz(Nodo_objeto* raiz, string txt);
+    void imprimir(Nodo_objeto* raiz);
+
+    string graphviz(Nodo_objeto* raiz, string txt);
 };
 
 #endif // ABB_LIB_H

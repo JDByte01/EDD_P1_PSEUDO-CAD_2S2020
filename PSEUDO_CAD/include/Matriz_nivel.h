@@ -17,27 +17,27 @@ using namespace std;
 
 class Matriz_nivel
 {
-    public:
-        Matriz_nivel();
-        virtual ~Matriz_nivel();
+public:
+    Matriz_nivel();
+    virtual ~Matriz_nivel();
 
-        //Otros
-        void agregarPunto(int x, int y, string letra, string color, int id);
+    //Otros
+    void agregarPunto(int x, int y, string letra, string color, int id);
 
-        bool existePunto(int x, int y);
-        int getIdPunto(int x, int y);
+    bool existePunto(int x, int y);
+    int getIdPunto(int x, int y);
 
-        string getGraphviz(string nombre);
+    string getGraphviz(string nombre);
 
-    protected:
+protected:
 
-    private:
-        Nodo_matriz* headers;
-        string dot, dotN, dotR, dotI;
+private:
+    Nodo_matriz* headers;
+    string dot, dotN, dotR, dotI;
 
-        //Metodos
-        void agregarEjeX(int x);
-        void agregarEjeY(int y);
+    //Metodos
+    void agregarEjeX(int x);
+    void agregarEjeY(int y);
 };
 
 #endif // MATRIZ_NIVEL_H

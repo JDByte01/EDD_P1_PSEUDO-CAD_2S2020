@@ -73,7 +73,7 @@ void test(){
     cout << "id punto 3,6 " << to_string(nivel1->getIdPunto(3,6)) << endl;
     cout << "id punto 2,1 " << to_string(nivel1->getIdPunto(2,1)) << endl;
 
-    cout << nivel1->getGraphviz("Nivel 1") << endl;
+    //cout << nivel1->getGraphviz("Nivel 1") << endl;
 }
 
 int main(){

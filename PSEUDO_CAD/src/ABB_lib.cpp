@@ -131,45 +131,7 @@ ABB_lib::~ABB_lib()
     }
   }
 
-  /*
-  * METODO ELIMINAR
-  * PARAMETROS INT ID
-  */
 
-  bool ABB_lib::eliminar(int id){
-    if(estaVacio()){
-        return false;
-    } else {
-        return eliminar(this->raiz, id);
-    }
-  }
-
-  bool ABB_lib::eliminar(Nodo_objeto* raiz, int id){
-    if(id < raiz->getIdentificador()){
-        //Tomar izquirda
-        if(raiz->getIzquierda() != NULL){
-            eliminar(raiz->getIzquierda(), id);
-        } else {
-            return false;
-        }
-    } else if(id > raiz->getIdentificador()){
-        //Tomar Derecha
-        if(raiz->getDerecha() != NULL){
-            eliminar(raiz->getDerecha(), id);
-        } else {
-            return true;
-        }
-    } else {
-        //Encontrado
-        //Eliminar nodo y reordenar
-
-
-        // Código aqui....
-
-
-        return true;
-    }
-  }
 
  /*
   * METODO IMPRIMIR EN CONSOLA ARBOL BINARIO DE BUSQUEDA

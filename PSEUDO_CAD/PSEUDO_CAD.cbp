@@ -34,7 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/ABB_Lib.h" />
+		<Unit filename="include/ABB_lib.h" />
+		<Unit filename="include/ABB_nivel.h" />
 		<Unit filename="include/Archivo.h" />
 		<Unit filename="include/Lista_puntos.h" />
 		<Unit filename="include/Matriz_nivel.h" />
@@ -44,6 +45,7 @@
 		<Unit filename="include/Nodo_objeto.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ABB_lib.cpp" />
+		<Unit filename="src/ABB_nivel.cpp" />
 		<Unit filename="src/Archivo.cpp" />
 		<Unit filename="src/Lista_puntos.cpp" />
 		<Unit filename="src/Matriz_nivel.cpp" />
