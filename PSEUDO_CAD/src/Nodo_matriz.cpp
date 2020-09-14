@@ -15,14 +15,13 @@ Nodo_matriz::Nodo_matriz()
     this->izquierda = NULL;
 }
 
-Nodo_matriz::Nodo_matriz(string letra, string color, int x, int y){
+Nodo_matriz::Nodo_matriz(string letra, string color, int x, int y, int id){
     //Insertar nodo
     this->letra = "";
     this->color = "";
     this->x = 0;
     this->y = 0;
-
-    setId(letra,x,y);
+    this->id = id;
 
     this->arriba = NULL;
     this->abajo = NULL;
@@ -54,10 +53,9 @@ Nodo_matriz::~Nodo_matriz()
  *
  */
 
- void Nodo_matriz::setId(string l, int x, int y){
-    this->id = "N" + l + to_string(x) + to_string(y);
- }
-
+string Nodo_matriz::getIdNodo(){
+    return "N".append(this->letra).append(to_string(this->x)).append(to_string(this->y));
+}
 
 /** \brief Genera estructura de nodo Graphviz
  *
@@ -71,15 +69,15 @@ Nodo_matriz::~Nodo_matriz()
 
     ///N85 [label = "L", width = 0.4, group = 8, shape = circle, style = filled, color = "#A0F4CF"];
     if(x > 0 && y > 0)
-        txt.append(this->id).append(" [label = \"").append(this->letra).append("\", width = 0.4, shape = circle, style = filled, group = ").append(to_string(this->x)).append(", color = ").append(this->color).append("];\n");
+        txt.append(this->getIdNodo()).append(" [label = \"").append(this->letra).append("\", width = 0.4, shape = circle, style = filled, group = ").append(to_string(this->x)).append(", color = ").append(this->color).append("];\n");
 
     /// Y5  [label = "5", width = 0.4, height = 0.4, style = filled, group = 0 ];
     if(x == 0)
-        txt.append(this->id).append(" [label = \"").append(to_string(this->y)).append(", width = 0.4, height = 0.4, group = 0];\n");
+        txt.append(this->getIdNodo()).append(" [label = \"").append(to_string(this->y)).append(", width = 0.4, height = 0.4, group = 0];\n");
 
     /// X20 [label = "20", width = 0.4, height = 0.4, group = 20 ];
     if(y == 0)
-        txt.append(this->id).append(" [label = \"").append(to_string(this->x)).append(", width = 0.4, height = 0.4, group = ").append(to_string(this->x)).append("];\n");
+        txt.append(this->getIdNodo()).append(" [label = \"").append(to_string(this->x)).append(", width = 0.4, height = 0.4, group = ").append(to_string(this->x)).append("];\n");
 
     return txt;
  }
@@ -98,10 +96,10 @@ Nodo_matriz::~Nodo_matriz()
         //txt.append(this->id).append("->").append(this->arriba->id).append(";\n");
 
     if(this->abajo != NULL)
-        txt.append(this->id).append("->").append(this->abajo->id).append(";\n");
+        txt.append(this->getIdNodo()).append("->").append(this->abajo->id).append(";\n");
 
     if(this->derecha != NULL)
-        txt.append(this->id).append("->").append(this->derecha->id).append(";\n");
+        txt.append(this->getIdNodo()).append("->").append(this->derecha->id).append(";\n");
 
     //if(this->izquierda != NULL)
         //txt.append(this->id).append("->").append(this->izquierda->id).append(";\n");

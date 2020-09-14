@@ -17,7 +17,7 @@ class Nodo_matriz
 {
     public:
         Nodo_matriz();
-        Nodo_matriz(string letra, string color, int x, int y);
+        Nodo_matriz(string letra, string color, int x, int y, int id);
         virtual ~Nodo_matriz();
          //Get
         string getId(){ return this->id; }
@@ -30,7 +30,7 @@ class Nodo_matriz
         Nodo_matriz* getDerecha(){ return this->derecha; }
         Nodo_matriz* getIzquierda(){ return this->izquierda; }
         //Set
-        void setId(string l, int x, int y);
+        void setId(int id){ this->id = id; }
         void setLetra(string l){ this->letra = l; }
         void setColor(string c){ this->color = c; }
         void setX(int x){ this->x = x; }
@@ -42,11 +42,12 @@ class Nodo_matriz
         //Otros
         string getNodoGraphviz();
         string getRutaGraphviz();
+        string getIdNodo();
 
     protected:
 
     private:
-        string id; //N + letra + x + y
+        int id; //id del objeto
         string letra;
         string color;
         int x;
