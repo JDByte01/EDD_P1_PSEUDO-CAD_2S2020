@@ -17,6 +17,9 @@ class Lista_puntos
         void vaciar();
         void imprimir();
 
+        //Get
+        Nodo_coordenada* getInicio(){ return this->inicio; }
+
     private:
         Nodo_coordenada* inicio;
 };

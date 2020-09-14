@@ -1,6 +1,9 @@
 #ifndef ABB_NIVEL_H
 #define ABB_NIVEL_H
 
+#include <Matriz_nivel.h>
+#include <Nodo_coordenada.h>
+
 #include <ABB_lib.h>
 
 
@@ -13,7 +16,6 @@ class ABB_nivel : public ABB_lib
 
         bool eliminar(int id);
 
-        void cargarJSON_Nivel(json lib);
         void generarMatriz(Matriz_nivel* m);
 
     protected:
@@ -21,6 +23,7 @@ class ABB_nivel : public ABB_lib
     private:
 
         bool eliminar(Nodo_objeto* raiz, int id);
+        void generarMatriz(Matriz_nivel*m, Nodo_objeto* raiz);
 };
 
 #endif // ABB_NIVEL_H

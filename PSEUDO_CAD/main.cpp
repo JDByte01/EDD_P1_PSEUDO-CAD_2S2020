@@ -7,6 +7,7 @@
 #include <Nodo_objeto.h>
 #include <Matriz_nivel.h>
 #include <Nodo_matriz.h>
+#include <ABB_nivel.h>
 
 //Archivos
 #include <Archivo.h>
@@ -74,6 +75,51 @@ void test(){
     cout << "id punto 2,1 " << to_string(nivel1->getIdPunto(2,1)) << endl;
 
     //cout << nivel1->getGraphviz("Nivel 1") << endl;
+
+    //Probando ABB_Nivel
+
+    ABB_nivel* abb_n1 = new ABB_nivel();
+
+    Nodo_objeto* n1 = new Nodo_objeto();
+    Nodo_objeto* n2 = new Nodo_objeto();
+
+    Lista_puntos* l1 = new Lista_puntos();
+    l1->insertar(1,1);
+    l1->insertar(1,2);
+    l1->insertar(2,1);
+    l1->insertar(1,3);
+    l1->insertar(3,1);
+
+    l1->insertar(6,1);
+    l1->insertar(7,1);
+
+    l1->insertar(1,6);
+    l1->insertar(1,7);
+
+    n1->setIdentificador(-2);
+    n1->setNombre("Pared");
+    n1->setLetra("P");
+    n1->setColor("#C4C4C4");
+    n1->setPuntos(l1);
+
+    Lista_puntos* l2 = new Lista_puntos();
+    l2->insertar(1,4);
+    l2->insertar(1,5);
+    l2->insertar(4,1);
+    l2->insertar(5,1);
+
+    n2->setIdentificador(-3);
+    n2->setNombre("Ventana");
+    n2->setLetra("V");
+    n2->setColor("#F4C4DA");
+    n2->setPuntos(l2);
+
+    abb_n1->insertar(n1);
+    abb_n1->insertar(n2);
+
+    abb_n1->generarMatriz(nivel1);
+
+    cout << nivel1->getGraphviz("Nivel 1") << endl;
 }
 
 int main(){

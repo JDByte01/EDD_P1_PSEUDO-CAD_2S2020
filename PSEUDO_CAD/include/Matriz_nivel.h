@@ -21,6 +21,9 @@ public:
     Matriz_nivel();
     virtual ~Matriz_nivel();
 
+    //Get
+    Nodo_matriz* getHeaders(){ return this->headers; }
+
     //Otros
     void agregarPunto(int x, int y, string letra, string color, int id);
 

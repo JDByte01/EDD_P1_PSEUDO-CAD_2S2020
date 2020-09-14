@@ -2,6 +2,7 @@
 #define NODO_OBJETO_H
 
 #include<Lista_puntos.h>
+#include <Nodo_coordenada.h>
 #include <iostream>
 
 using namespace std;
@@ -42,6 +43,7 @@ class Nodo_objeto
         string getNodoGraphviz();
         void imprimirNodo();
         void imprimirPuntos();
+        Nodo_coordenada* getInicioPunto(){return this->puntos->getInicio(); }
 
 
     private:

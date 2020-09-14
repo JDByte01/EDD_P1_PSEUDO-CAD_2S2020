@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600083551 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1600123688 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -7,6 +7,7 @@
 	<Nodo_objeto.h>
 	<Matriz_nivel.h>
 	<Nodo_matriz.h>
+	<ABB_nivel.h>
 	<Archivo.h>
 	<nlohmann/json.hpp>
 	<iostream>
@@ -15,7 +16,7 @@
 1599909609 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_puntos.cpp
 	"Lista_puntos.h"
 
-1598499577 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_puntos.h
+1600123261 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_puntos.h
 	<Nodo_coordenada.h>
 	<iostream>
 
@@ -25,8 +26,9 @@
 1598504309 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_coordenada.cpp
 	"Nodo_coordenada.h"
 
-1599901759 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_objeto.h
+1600124008 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_objeto.h
 	<Lista_puntos.h>
+	<Nodo_coordenada.h>
 	<iostream>
 
 1599909903 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_objeto.cpp
@@ -63,7 +65,7 @@
 1600081290 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\matriz_nivel.cpp
 	"Matriz_nivel.h"
 
-1600082828 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\matriz_nivel.h
+1600122562 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\matriz_nivel.h
 	<Nodo_matriz.h>
 	<iostream>
 	<string>
@@ -74,4 +76,12 @@
 
 1600081302 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_matriz.cpp
 	"Nodo_matriz.h"
+
+1600123290 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\abb_nivel.h
+	<Matriz_nivel.h>
+	<Nodo_coordenada.h>
+	<ABB_lib.h>
+
+1600124182 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
+	"ABB_nivel.h"
 

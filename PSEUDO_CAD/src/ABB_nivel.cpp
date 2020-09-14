@@ -67,14 +67,51 @@ ABB_nivel::ABB_nivel(const ABB_nivel& other)
     }
   }
 
-  /** \brief Lee JSON e inserta en el ABB y en la Matris
+  /** \brief Genera la matriz a base de sus nodos
    *
-   * \param JSON lib
+   * \param Matriz_nivel m
    * \return void
    *
    */
 
-   void ABB_nivel::cargarJSON_Nivel(json lib){
+  void ABB_nivel::generarMatriz(Matriz_nivel* m){
+    //Limpiar la matriz por referencia
+    m->getHeaders()->setDerecha(NULL);
+    m->getHeaders()->setAbajo(NULL);
 
-   }
+    //Agregar cada punto de cada nodo en la matriz
+     if(estaVacio()){
+       cout << " | -> ABB vacio..." << endl;
+    } else {
+        cout << " |-> Generando Matriz..." << endl;
+        generarMatriz(m,this->getRaiz());
+    }
+  }
+
+  void ABB_nivel::generarMatriz(Matriz_nivel* m, Nodo_objeto* raiz){
+
+    if(raiz->getIzquierda() != NULL)
+        generarMatriz(m,raiz->getIzquierda());
+
+    //Leer cada punto he insertar
+    cout << "Insertando punto " << raiz->getNombre() << endl;
+    Nodo_coordenada* n = raiz->getInicioPunto();
+
+    if(n != NULL){
+        while(n->getSiguiente() != NULL){
+            cout << "(x,y) " << to_string(n->getX()) << ", " << to_string(n->getY()) << endl;
+            m->agregarPunto(n->getX(),n->getY(),raiz->getLetra(),raiz->getColor(),raiz->getIdentificador());
+            n = n->getSiguiente();
+        }
+        cout << "(x,y) " << to_string(n->getX()) << ", " << to_string(n->getY()) << endl;
+        m->agregarPunto(n->getX(),n->getY(),raiz->getLetra(),raiz->getColor(),raiz->getIdentificador());
+    } else {
+        cout << "Lista vacia" << endl;
+    }
+
+
+
+    if(raiz->getDerecha() != NULL)
+        generarMatriz(m,raiz->getDerecha());
+  }
 
