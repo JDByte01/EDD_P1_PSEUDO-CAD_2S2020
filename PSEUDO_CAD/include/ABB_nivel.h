@@ -14,6 +14,7 @@ class ABB_nivel : public ABB_lib
         bool eliminar(int id);
 
         void cargarJSON_Nivel(json lib);
+        void generarMatriz(Matriz_nivel* m);
 
     protected:
 
