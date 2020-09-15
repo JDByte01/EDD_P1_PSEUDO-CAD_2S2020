@@ -3,7 +3,7 @@
 Nodo_nivel::Nodo_nivel()
 {
     //ctor
-    this->nombre = "";
+    this->nombre = 0;
     this->objetos = 0;
     this->paredes = 0;
     this->ventanas = 0;
@@ -21,7 +21,7 @@ Nodo_nivel::~Nodo_nivel()
     this->matriz->getHeaders()->setDerecha(NULL);
     this->matriz->getHeaders()->setAbajo(NULL);
     this->siguiente = NULL;
-    this->nombre = "";
+    this->nombre = 0;
     this->objetos = 0;
     this->paredes = 0;
     this->ventanas = 0;
@@ -36,7 +36,7 @@ Nodo_nivel::~Nodo_nivel()
 
  void Nodo_nivel::cargarJSON(json j){
 
-    this->setNombre(to_string(j["nivel"]));
+    this->setNombre(j["nivel"]);
 
     this->cargarParedesJSON(j["paredes"]);
     this->cargarVentanasJSON(j["ventanas"]);
@@ -71,7 +71,7 @@ void Nodo_nivel::cargarObjetosJSON(json j){
         this->arbol->insertar(ob);
     }
 
-    cout << " | Objetos encontrados: "<< j.size() << endl;
+    //cout << " | Objetos encontrados: "<< j.size() << endl;
 
 }
 
@@ -111,7 +111,7 @@ void Nodo_nivel::cargarObjetosJSON(json j){
 
     }
 
-    cout << " | Paredes encontradas: "<< j.size() << endl;
+    //cout << " | Paredes encontradas: "<< j.size() << endl;
  }
 
  /** \brief Agregar ventana al arbol ABB
@@ -150,7 +150,7 @@ void Nodo_nivel::cargarVentanasJSON(json j){
 
     }
 
-    cout << " | Ventanas encontradas: "<< j.size() << endl;
+    //cout << " | Ventanas encontradas: "<< j.size() << endl;
 }
 
 /** \brief Generar dot de la matriz por medio del ABB

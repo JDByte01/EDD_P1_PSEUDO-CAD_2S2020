@@ -9,6 +9,7 @@
 #include <Nodo_matriz.h>
 #include <ABB_nivel.h>
 #include <Nodo_nivel.h>
+#include <Lista_nivel.h>
 
 //Archivos
 #include <Archivo.h>
@@ -51,11 +52,17 @@ void testJSON(){
 }
 
 void testListaNivel(){
+    Archivo* archivo = new Archivo();
     string ruta = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Niveles.json";
 
-    Nodo_nivel* level1 = new Nodo_nivel();
-    Archivo* archivo = new Archivo();
+    Lista_nivel* ln = new Lista_nivel();
 
+    ln->cargarJSON(archivo->leerJSON(ruta));
+    cout << " | Lista de niveles" << endl;
+    ln->imprimir();
+
+    /*
+    Nodo_nivel* level1 = new Nodo_nivel();
     if(archivo->existe(ruta)){
         //Existe el archivo
         json j = archivo->leerJSON(ruta);
@@ -70,6 +77,7 @@ void testListaNivel(){
     cout << "Dot...\n" << endl;
 
     level1->mostrarNivel();
+    */
 }
 void test(){
     //Probar matiz dispersa

@@ -24,7 +24,7 @@ class Nodo_nivel
         virtual ~Nodo_nivel();
 
         //Get
-        string getNombre(){ return this->nombre; }
+        int getNombre(){ return this->nombre; }
         int getObjetos(){ return this->objetos; }
         int getParedes(){ return this->paredes; }
         int getVentanas(){ return this->ventanas; }
@@ -33,7 +33,7 @@ class Nodo_nivel
         Matriz_nivel* getMatriz(){ return this->matriz; }
 
         //Set
-        void setNombre(string nombre){ this->nombre = nombre; }
+        void setNombre(int nombre){ this->nombre = nombre; }
         void setSiguiente(Nodo_nivel* n){ this->siguiente = n; }
 
         //Otors
@@ -46,7 +46,7 @@ class Nodo_nivel
     protected:
 
     private:
-        string nombre;
+        int nombre;
         int objetos; //cantidad de objetos en el nivel
         int paredes; //Cantidad de paredes en el nivel
         int ventanas; //Cantidad de ventanas en el nivel

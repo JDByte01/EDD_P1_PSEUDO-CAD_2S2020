@@ -20,6 +20,22 @@ class Lista_nivel
         Lista_nivel();
         virtual ~Lista_nivel();
 
+        //Get
+        int getSize(){ return this->size; }
+        Nodo_nivel* getInicio(){ return this->inicio; }
+
+        //Set
+        void setInicio(Nodo_nivel* n){ this->inicio = n; }
+
+        //Otros
+        void cargarJSON(json j);
+        void insertarNivel(Nodo_nivel* n);
+        void nuevoNivel(int nombre);
+        void eliminarNivel(int nombre);
+        bool estaVacio(){ return this->inicio == NULL; }
+        Nodo_nivel* buscarNivel(int nombre);
+        void imprimir();
+
     protected:
 
     private:
