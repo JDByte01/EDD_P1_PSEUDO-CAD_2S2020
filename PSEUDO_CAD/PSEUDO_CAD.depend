@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600168962 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1600169845 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -10,6 +10,8 @@
 	<ABB_nivel.h>
 	<Nodo_nivel.h>
 	<Lista_nivel.h>
+	<Nodo_proyecto.h>
+	<AVL_proyectos.h>
 	<Archivo.h>
 	<nlohmann/json.hpp>
 	<iostream>
