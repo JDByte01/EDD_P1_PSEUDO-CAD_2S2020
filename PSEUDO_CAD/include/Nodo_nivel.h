@@ -37,9 +37,9 @@ class Nodo_nivel
 
         //Otors
         void cargarJSON(json j);
-        void addObjeto(Nodo_objeto* n);
-        void addPared(Nodo_objeto* n);
-        void addVentana(Nodo_objeto* n);
+        void cargarParedesJSON(json j);
+        void cargarVentanasJSON(json j);
+        void cargarObjetosJSON(json j);
         void mostrarNivel();
 
     protected:
@@ -53,6 +53,9 @@ class Nodo_nivel
         Nodo_nivel* siguiente;
         ABB_nivel* arbol;
         Matriz_nivel* matriz;
+
+        //auxiliares
+        //int lix, lsx, liy, lsy, dx, dy;
 };
 
 #endif // NODO_NIVEL_H

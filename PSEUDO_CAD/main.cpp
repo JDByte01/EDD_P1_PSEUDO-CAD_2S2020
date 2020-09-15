@@ -8,6 +8,7 @@
 #include <Matriz_nivel.h>
 #include <Nodo_matriz.h>
 #include <ABB_nivel.h>
+#include <Nodo_nivel.h>
 
 //Archivos
 #include <Archivo.h>
@@ -48,9 +49,32 @@ void testJSON(){
     //}
 
 }
+
+void testListaNivel(){
+    string ruta = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Niveles.json";
+
+    Nodo_nivel* level1 = new Nodo_nivel();
+    Archivo* archivo = new Archivo();
+
+    if(archivo->existe(ruta)){
+        //Existe el archivo
+        json j = archivo->leerJSON(ruta);
+        level1->cargarJSON(j["niveles"][0]);
+    } else {
+        //No existe el archivo
+        cout << " |> **ERROR: Ruta incorrecta..." << endl;
+    }
+
+    cout << "Paredes totales = " << to_string(level1->getParedes()) << endl;
+
+    cout << "Dot...\n" << endl;
+
+    level1->mostrarNivel();
+    cout << level1->getArbol()->getGraphviz("Arbol Nivel") << endl;
+}
 void test(){
     //Probar matiz dispersa
-    string ruta = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Niveles.json";
+
 
     Matriz_nivel* nivel1 = new Matriz_nivel();
 
@@ -119,7 +143,10 @@ void test(){
 
     abb_n1->generarMatriz(nivel1);
 
-    cout << nivel1->getGraphviz("Nivel 1") << endl;
+    //cout << nivel1->getGraphviz("Nivel 1") << endl;
+
+    //cout << nivel1->getGraphviz() << endl;
+    //cout << nivel1->getGraphviz() << endl;
 }
 
 int main(){
@@ -127,7 +154,8 @@ int main(){
     //m->encabezado();
     //m->menuPrincipal();
 
-    test();
+    testListaNivel();
+    //test();
     //testJSON();
 
     return 0;

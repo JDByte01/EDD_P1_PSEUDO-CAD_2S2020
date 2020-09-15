@@ -70,7 +70,19 @@
           "color": "#F6FB34"
         }
       ],
-      "ventanas": [],
+      "ventanas": [
+        {
+          "inicio": [
+            5,
+            4
+          ],
+          "final": [
+            6,
+            5
+          ],
+          "color": "#F6FB34"
+        }
+      ],
       "objetos": [
         {
           "identificador": 1,
@@ -169,7 +181,6 @@
           ]
         }
       ]
-    },
-    {}
+    }
   ]
 }
