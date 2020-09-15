@@ -50,6 +50,9 @@ void testJSON(){
     //}
 
 }
+void testAVL(){
+    cout << "Test AVL" << endl;
+}
 
 void testListaNivel(){
     Archivo* archivo = new Archivo();
@@ -161,7 +164,8 @@ int main(){
     //m->encabezado();
     //m->menuPrincipal();
 
-    testListaNivel();
+    testAVL();
+    //testListaNivel();
     //test();
     //testJSON();
 
