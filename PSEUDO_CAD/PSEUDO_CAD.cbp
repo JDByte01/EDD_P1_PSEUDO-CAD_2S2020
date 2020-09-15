@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/ABB_Lib.h" />
 		<Unit filename="include/ABB_nivel.h" />
+		<Unit filename="include/AVL_proyectos.h" />
 		<Unit filename="include/Archivo.h" />
 		<Unit filename="include/Lista_nivel.h" />
 		<Unit filename="include/Lista_puntos.h" />
@@ -45,9 +46,11 @@
 		<Unit filename="include/Nodo_matriz.h" />
 		<Unit filename="include/Nodo_nivel.h" />
 		<Unit filename="include/Nodo_objeto.h" />
+		<Unit filename="include/Nodo_proyecto.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ABB_lib.cpp" />
 		<Unit filename="src/ABB_nivel.cpp" />
+		<Unit filename="src/AVL_proyectos.cpp" />
 		<Unit filename="src/Archivo.cpp" />
 		<Unit filename="src/Lista_nivel.cpp" />
 		<Unit filename="src/Lista_puntos.cpp" />
@@ -57,6 +60,7 @@
 		<Unit filename="src/Nodo_matriz.cpp" />
 		<Unit filename="src/Nodo_nivel.cpp" />
 		<Unit filename="src/Nodo_objeto.cpp" />
+		<Unit filename="src/Nodo_proyecto.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

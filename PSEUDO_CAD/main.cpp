@@ -10,6 +10,8 @@
 #include <ABB_nivel.h>
 #include <Nodo_nivel.h>
 #include <Lista_nivel.h>
+#include <Nodo_proyecto.h>
+#include <AVL_proyectos.h>
 
 //Archivos
 #include <Archivo.h>
