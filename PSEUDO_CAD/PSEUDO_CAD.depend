@@ -93,10 +93,11 @@
 	<Nodo_nivel.h>
 	<iostream>
 
-1600155212 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
+1600158888 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
 	<ABB_nivel.h>
 	<Matriz_nivel.h>
 	<Nodo_objeto.h>
+	<Archivo.h>
 	<iostream>
 
 1600156221 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_nivel.cpp

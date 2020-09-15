@@ -4,6 +4,7 @@
 #include <ABB_nivel.h>
 #include <Matriz_nivel.h>
 #include <Nodo_objeto.h>
+#include <Archivo.h>
 
 #include <iostream>
 
@@ -53,6 +54,7 @@ class Nodo_nivel
         Nodo_nivel* siguiente;
         ABB_nivel* arbol;
         Matriz_nivel* matriz;
+        Archivo* archivo;
 
         //auxiliares
         //int lix, lsx, liy, lsy, dx, dy;

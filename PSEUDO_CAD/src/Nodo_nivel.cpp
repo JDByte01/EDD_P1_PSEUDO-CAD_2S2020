@@ -10,6 +10,8 @@ Nodo_nivel::Nodo_nivel()
     this->siguiente = NULL;
     this->arbol = new ABB_nivel();
     this->matriz = new Matriz_nivel();
+
+    this->archivo = new Archivo();
 }
 
 Nodo_nivel::~Nodo_nivel()
@@ -159,7 +161,12 @@ void Nodo_nivel::cargarVentanasJSON(json j){
 
  void Nodo_nivel::mostrarNivel(){
     this->arbol->generarMatriz(this->matriz);
-    cout << this->matriz->getGraphviz("Nivel 1") << endl;
+
+    //Generar dot
+    cout << "\n | Generando Matris Dispersa del nivel " << this->getNombre() << endl;
+    archivo->generarEstructura("Matriz_Nivel",this->matriz->getGraphviz("Nivel "+this->getNombre()));
+    cout << "\n | Generando Arbol Binario del nivel " << this->getNombre() << endl;
+    archivo->generarEstructura("ABB_Nivel",this->arbol->getGraphviz("ABB nivel "+this->getNombre()));
  }
 
 

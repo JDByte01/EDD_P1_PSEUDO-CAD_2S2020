@@ -70,7 +70,6 @@ void testListaNivel(){
     cout << "Dot...\n" << endl;
 
     level1->mostrarNivel();
-    cout << level1->getArbol()->getGraphviz("Arbol Nivel") << endl;
 }
 void test(){
     //Probar matiz dispersa
