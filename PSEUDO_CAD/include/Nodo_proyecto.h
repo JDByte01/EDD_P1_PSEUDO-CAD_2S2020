@@ -11,6 +11,11 @@ class Nodo_proyecto
     protected:
 
     private:
+        int id;
+        int altura;
+
+        Nodo_proyecto* izquierda;
+        Nodo_proyecto* derecha;
 };
 
 #endif // NODO_PROYECTO_H
