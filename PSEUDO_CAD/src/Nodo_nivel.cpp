@@ -69,6 +69,7 @@ void Nodo_nivel::cargarObjetosJSON(json j){
         }
 
         this->arbol->insertar(ob);
+        this->objetos++;
     }
 
     //cout << " | Objetos encontrados: "<< j.size() << endl;
@@ -145,8 +146,8 @@ void Nodo_nivel::cargarVentanasJSON(json j){
 
         this->arbol->insertar(ob);
 
-        //Incrementar la variable paredes
-        this->paredes++;
+        //Incrementar la variable ventanas
+        this->ventanas++;
 
     }
 
@@ -169,6 +170,28 @@ void Nodo_nivel::cargarVentanasJSON(json j){
     archivo->generarEstructura("ABB_Nivel",this->arbol->getGraphviz("ABB nivel "+this->getNombre()));
  }
 
+/** \brief Retorna el tamaño en x de la matriz
+ *
+ * \return int x
+ *
+ */
 
+ int Nodo_nivel::getX(){
+    if(this->matriz != NULL)
+        return this->matriz->getX();
+    else
+        return -1;
+}
 
+/** \brief Retorna el tamaño en y de la matriz
+ *
+ * \return int y
+ *
+ */
 
+ int Nodo_nivel::getY(){
+    if(this->matriz != NULL)
+        return this->matriz->getY();
+    else
+        return -1;
+}

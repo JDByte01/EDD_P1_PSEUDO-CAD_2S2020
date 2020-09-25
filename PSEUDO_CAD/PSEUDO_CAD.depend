@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600169845 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1601072156 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -66,10 +66,10 @@
 	<fstream>
 	<iostream>
 
-1600081290 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\matriz_nivel.cpp
+1601067345 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\matriz_nivel.cpp
 	"Matriz_nivel.h"
 
-1600122562 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\matriz_nivel.h
+1601067185 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\matriz_nivel.h
 	<Nodo_matriz.h>
 	<iostream>
 	<string>
@@ -89,14 +89,14 @@
 1600137322 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
 	"ABB_nivel.h"
 
-1600169045 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
+1601068467 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
 	"Lista_nivel.h"
 
 1600168856 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_nivel.h
 	<Nodo_nivel.h>
 	<iostream>
 
-1600168521 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
+1601067350 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
 	<ABB_nivel.h>
 	<Matriz_nivel.h>
 	<Nodo_objeto.h>
@@ -111,8 +111,12 @@
 
 1600169523 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
 
-1600169498 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601072118 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
-1600169497 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+1601071232 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+	<Nodo_nivel.h>
+	<Lista_nivel.h>
+	<iostream>
+	<string>
 

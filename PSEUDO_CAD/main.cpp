@@ -54,6 +54,14 @@ void testJSON(){
 }
 void testAVL(){
     cout << "Test AVL" << endl;
+
+    //Creando Nodo Proyecto
+    Nodo_proyecto* np1 = new Nodo_proyecto();
+    np1->setNombre("Proyecto 1");
+    np1->imprimir();
+
+    np1->setNombre("Proyecto1");
+    np1->imprimir();
 }
 
 void testListaNivel(){

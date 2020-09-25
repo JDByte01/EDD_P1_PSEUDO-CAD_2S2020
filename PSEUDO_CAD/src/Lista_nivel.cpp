@@ -49,6 +49,7 @@ Lista_nivel::~Lista_nivel()
         }
 
         temp->setSiguiente(n);
+        this->size++;
     }
   }
 

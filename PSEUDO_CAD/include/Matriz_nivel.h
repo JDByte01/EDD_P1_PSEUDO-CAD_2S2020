@@ -29,6 +29,8 @@ public:
 
     bool existePunto(int x, int y);
     int getIdPunto(int x, int y);
+    int getX(){ return this->x; }
+    int getY(){ return this->y; }
 
     string getGraphviz(string nombre);
 
@@ -37,6 +39,8 @@ protected:
 private:
     Nodo_matriz* headers;
     string dot, dotN, dotR, dotI;
+    int x;
+    int y;
 
     //Metodos
     void agregarEjeX(int x);

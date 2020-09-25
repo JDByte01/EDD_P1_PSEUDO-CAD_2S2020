@@ -8,6 +8,8 @@ Matriz_nivel::Matriz_nivel()
     this->dotN = "";
     this->dotR = "";
     this->dotI = "";
+    this->x = 0;
+    this->y = 0;
 }
 
 Matriz_nivel::~Matriz_nivel()
@@ -322,6 +324,7 @@ string Matriz_nivel::getGraphviz(string nombre){
             //Agregar al final del eje Y
             temp->setDerecha(nodo);
             nodo->setIzquierda(temp);
+            this->x = x; //Agregar al valor de x;
         } else if(temp->getDerecha() != NULL && temp->getDerecha()->getX() != x){
             //Agregar entre el eje Y
             Nodo_matriz* aux = temp->getDerecha();
@@ -364,6 +367,7 @@ void Matriz_nivel::agregarEjeY(int y){
             //Agregar al final del eje Y
             temp->setAbajo(nodo);
             nodo->setArriba(temp);
+            this->y = y;
         } else if(temp->getAbajo() != NULL && temp->getAbajo()->getY() != y){
             //Agregar entre el eje Y
             Nodo_matriz* aux = temp->getAbajo();
@@ -377,7 +381,6 @@ void Matriz_nivel::agregarEjeY(int y){
         }
     }
 }
-
 
 
 
