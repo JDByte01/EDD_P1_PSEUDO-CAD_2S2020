@@ -2,3 +2,9 @@
 
 /bin/Debug/PSEUDO_CAD.exe
 /obj
+
+\PSEUDO_CAD\bin
+\PSEUDO_CAD\obj
+
+/PSEUDO_CAD/bin
+/PSEUDO_CAD/obj
