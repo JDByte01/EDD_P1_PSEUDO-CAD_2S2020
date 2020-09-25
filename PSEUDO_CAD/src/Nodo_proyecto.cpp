@@ -50,6 +50,7 @@ Nodo_proyecto::~Nodo_proyecto()
   *
   */
   void Nodo_proyecto::setID(string nombre){
+    this->id = 0;
     for(int i = 0; i < nombre.length(); i++){
         this->id += (int)nombre[i];
     }

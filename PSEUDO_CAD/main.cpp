@@ -60,7 +60,7 @@ void testAVL(){
     np1->setNombre("Proyecto 1");
     np1->imprimir();
 
-    np1->setNombre("Proyecto1");
+    np1->setNombre("Proyecto 2");
     np1->imprimir();
 }
 
