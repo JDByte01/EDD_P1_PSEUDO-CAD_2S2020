@@ -101,5 +101,6 @@ void Nodo_proyecto::cargarJSON(json j){
 void Nodo_proyecto::imprimir(){
     cout << " | (" << to_string(this->id) << ") " << this->nombre << endl;
     cout << " | -> Niveles: " << to_string(this->sizeNiveles()) << endl;
+    this->niveles->imprimir();
 }
 

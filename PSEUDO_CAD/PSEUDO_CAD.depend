@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1601072312 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1601073327 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -111,7 +111,7 @@
 
 1600169523 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
 
-1601072946 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601073425 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
 1601071232 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h

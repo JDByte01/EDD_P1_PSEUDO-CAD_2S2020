@@ -53,6 +53,9 @@ void testJSON(){
 
 }
 void testAVL(){
+    Archivo* archivo = new Archivo();
+    string ruta = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Niveles.json";
+
     cout << "Test AVL" << endl;
 
     //Creando Nodo Proyecto
@@ -60,7 +63,14 @@ void testAVL(){
     np1->setNombre("Proyecto 1");
     np1->imprimir();
 
+
+
+    Lista_nivel* ln = new Lista_nivel();
+
+    ln->cargarJSON(archivo->leerJSON(ruta));
+
     np1->setNombre("Proyecto 2");
+    np1->setNiveles(ln);
     np1->imprimir();
 }
 

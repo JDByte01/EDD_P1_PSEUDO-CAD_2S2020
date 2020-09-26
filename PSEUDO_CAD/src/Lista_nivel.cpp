@@ -28,7 +28,6 @@ Lista_nivel::~Lista_nivel()
         n = new Nodo_nivel();
         n->cargarJSON(j["niveles"][i]);
         insertarNivel(n);
-        this->size++;
     }
  }
 
@@ -49,8 +48,8 @@ Lista_nivel::~Lista_nivel()
         }
 
         temp->setSiguiente(n);
-        this->size++;
     }
+    this->size++;
   }
 
   /** \brief insertar un nuevo nivel vacio
