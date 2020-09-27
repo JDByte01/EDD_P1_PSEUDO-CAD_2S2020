@@ -78,7 +78,6 @@ void testAVL(){
 
     //Lista ordenada de proyectos
     Lista_proyectos* lp = new Lista_proyectos();
-    system("pause");
 
     lp->insertar(125, "Py1 ", 10);
     lp->insertar(120, "Py2 ", 1);
@@ -86,14 +85,13 @@ void testAVL(){
     lp->insertar(123, "Py4 ", 3);
     lp->insertar(156, "Py5 ", 2);
     lp->insertar(80, "Py6 ", 8);
-    system("pause");
 
     cout << " Imprimir lista AZ" << endl;
     lp->imprimirAZ();
-    system("pause");
+
     cout << " Imprimir lista ZA" << endl;
     lp->imprimirZA();
-    system("pause");
+
 }
 
 void testListaNivel(){

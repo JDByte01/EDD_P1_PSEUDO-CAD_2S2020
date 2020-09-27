@@ -2,6 +2,7 @@
 #define AVL_PROYECTOS_H
 
 #include <Nodo_proyecto.h>
+#include <Lista_proyectos.h>
 
 #include <iostream>
 #include <string>
@@ -54,11 +55,12 @@ class AVL_proyectos
 
         //Funciones
         Nodo_proyecto* insertar(Nodo_proyecto* raiz, Nodo_proyecto* n);
-        Nodo_proyecto* eliminar(Nodo_proyecto* raiz, Nodo_proyecto* n);
+        Nodo_proyecto* eliminar(Nodo_proyecto* raiz, int id);
         Nodo_proyecto* buscar(Nodo_proyecto* raiz, int id);
 
         //Recorrer
         void imprimir(Nodo_proyecto* n);
+        void llenarLista(Nodo_proyecto* n);
 };
 
 #endif // AVL_PROYECTOS_H
