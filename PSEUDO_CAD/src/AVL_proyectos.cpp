@@ -86,6 +86,13 @@ int AVL_proyectos::getBalance(Nodo_proyecto* n){
     this->raiz = insertar(this->raiz, n);
  }
 
+ void AVL_proyectos::insertar(string proyecto){
+    Nodo_proyecto* n = new Nodo_proyecto();
+    n->setNombre(proyecto);
+
+    this->raiz = insertar(this->raiz, n);
+ }
+
  Nodo_proyecto* AVL_proyectos::insertar(Nodo_proyecto* raiz, Nodo_proyecto* n){
      //1- Inserción normal
     if(raiz == NULL){
@@ -283,7 +290,7 @@ void AVL_proyectos::imprimir(){
     if(this->raiz != NULL)
         imprimir(this->raiz);
     else
-        cout << " | **AVL vacio" << endl;
+        cout << " |%%%| **AVL vacio" << endl;
 }
 
 void AVL_proyectos::imprimir(Nodo_proyecto* n){

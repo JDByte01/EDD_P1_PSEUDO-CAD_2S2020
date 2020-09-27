@@ -251,11 +251,11 @@ void test(){
 }
 
 int main(){
-    //Menus* m = new Menus();
-    //m->encabezado();
-    //m->menuPrincipal();
+    Menus* m = new Menus();
+    m->encabezado();
+    m->menuPrincipal();
 
-    testAVL();
+    //testAVL();
     //testListaNivel();
     //test();
     //testJSON();

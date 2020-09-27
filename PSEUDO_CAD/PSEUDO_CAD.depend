@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1601213909 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1601214863 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -48,14 +48,23 @@
 	<nlohmann/json.hpp>
 	<iostream>
 
-1599903716 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
+1601237847 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
 	<Nodo_objeto.h>
 	<nlohmann/json.hpp>
 	<Archivo.h>
 	<ABB_Lib.h>
+	<Matriz_nivel.h>
+	<Nodo_matriz.h>
+	<ABB_nivel.h>
+	<Nodo_nivel.h>
+	<Lista_nivel.h>
+	<Nodo_proyecto.h>
+	<AVL_proyectos.h>
+	<Nodo_lista.h>
+	<Lista_proyectos.h>
 	<iostream>
 
-1599909620 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1601238703 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
 1599909570 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
@@ -91,36 +100,36 @@
 1600137322 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
 	"ABB_nivel.h"
 
-1601212700 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
+1601237612 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
 	"Lista_nivel.h"
 
-1600168856 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_nivel.h
+1601239022 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_nivel.h
 	<Nodo_nivel.h>
 	<iostream>
 
-1601067350 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
+1601239303 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_nivel.h
 	<ABB_nivel.h>
 	<Matriz_nivel.h>
 	<Nodo_objeto.h>
 	<Archivo.h>
 	<iostream>
 
-1601072271 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_nivel.cpp
+1601239411 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_nivel.cpp
 	"Nodo_nivel.h"
 
-1601211711 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\avl_proyectos.cpp
+1601237827 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\avl_proyectos.cpp
 	"AVL_proyectos.h"
 
-1601207576 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
+1601214737 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
 	<Nodo_proyecto.h>
 	<Lista_proyectos.h>
 	<iostream>
 	<string>
 
-1601213977 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601239047 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
-1601191352 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+1601238682 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
 	<Nodo_nivel.h>
 	<Lista_nivel.h>
 	<iostream>

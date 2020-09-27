@@ -40,6 +40,8 @@ class AVL_proyectos
         bool eliminar(int id);
         Nodo_proyecto* buscar(int id);
 
+        bool estaVacio(){ return this->raiz == NULL; }
+
         //Recorrer Árbol AVL
         void imprimir();
         void imprimirListaAZ();

@@ -41,7 +41,7 @@ class Nodo_nivel
         void cargarParedesJSON(json j);
         void cargarVentanasJSON(json j);
         void cargarObjetosJSON(json j);
-        void mostrarNivel();
+        void mostrarNivel(int id);
         int getX();
         int getY();
 

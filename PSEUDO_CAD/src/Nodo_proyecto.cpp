@@ -107,8 +107,16 @@ void Nodo_proyecto::cargarJSON(json j){
  */
 
 void Nodo_proyecto::imprimir(){
-    cout << " | (" << to_string(this->id) << ") " << this->nombre << endl;
-    cout << " | -> Niveles: " << to_string(this->sizeNiveles()) << endl;
-    //this->niveles->imprimir();
+    cout << " |%%%| (" << to_string(this->id) << ") " << this->nombre << ", Niveles: " << to_string(this->sizeNiveles()) << endl;
+    this->niveles->imprimir();
 }
 
+/** \brief Generar niveles en formato IMG
+ *
+ * \return void
+ *
+ */
+
+void Nodo_proyecto::generarNiveles(){
+    this->niveles->generarNiveles(this->id);
+}

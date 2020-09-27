@@ -36,6 +36,8 @@ class Lista_nivel
         Nodo_nivel* buscarNivel(int nombre);
         void imprimir();
 
+        void generarNiveles(int id);
+
     protected:
 
     private:

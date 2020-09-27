@@ -135,10 +135,32 @@ void Lista_nivel::nuevoNivel(int nombre){
         Nodo_nivel* temp = this->inicio;
 
         while(temp->getSiguiente() != NULL){
-            cout << " | - Nivel: " << to_string(temp->getNombre()) << endl;
+            cout << " |%%%| - Nivel: " << to_string(temp->getNombre()) << endl;
             temp = temp->getSiguiente();
         }
 
-        cout << " | - Nivel: " << to_string(temp->getNombre()) << endl;
+        cout << " |%%%| - Nivel: " << to_string(temp->getNombre()) << endl;
     }
   }
+
+  /** \brief Generar niveles
+   *
+   * \param int id
+   * \return void
+   *
+   */
+
+void Lista_nivel::generarNiveles(int id){
+    if(!estaVacio()){
+        Nodo_nivel* temp = this->inicio;
+
+        while(temp->getSiguiente() != NULL){
+            temp->mostrarNivel(id);
+            temp = temp->getSiguiente();
+        }
+        temp->mostrarNivel(id);
+    } else {
+        cout << " |%%%| **No hay niveles dentro del proyecto..." << endl;
+    }
+}
+

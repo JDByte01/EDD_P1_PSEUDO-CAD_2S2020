@@ -46,6 +46,8 @@ class Nodo_proyecto
         void cargarJSON(json j);
         void imprimir();
 
+        void generarNiveles();
+
     protected:
 
     private:
