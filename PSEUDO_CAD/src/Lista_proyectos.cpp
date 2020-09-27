@@ -9,15 +9,17 @@ Lista_proyectos::Lista_proyectos()
 
 Lista_proyectos::~Lista_proyectos()
 {
-    Nodo_lista* temp = this->inicio;
-    Nodo_lista* auxiliar;
+    if(this->inicio != NULL){
+         Nodo_lista* temp = this->inicio;
+        Nodo_lista* auxiliar;
 
-    while(temp->getSiguiente() != NULL){
-        auxiliar = temp;
-        temp = temp->getSiguiente();
-        delete auxiliar;
+        while(temp->getSiguiente() != NULL){
+            auxiliar = temp;
+            temp = temp->getSiguiente();
+            delete auxiliar;
+        }
+        delete temp;
     }
-    delete temp;
 
     this->inicio = NULL;
     this->fin = NULL;
@@ -45,7 +47,7 @@ void Lista_proyectos::insertar(int id, string nombre, int niveles){
         } else {
             Nodo_lista* temp = this->inicio;
             Nodo_lista* aux = this->inicio;
-            while(temp->getSiguiente() != NULL && temp->getNiveles() < niveles){
+            while(temp->getSiguiente() != NULL && temp->getNiveles() <= niveles){
                 aux = temp;
                 temp = temp->getSiguiente();
             }
@@ -97,3 +99,4 @@ Nodo_lista* temp = this->fin;
     }
     temp->imprimir();
 }
+

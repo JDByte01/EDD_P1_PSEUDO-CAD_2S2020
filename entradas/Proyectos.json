@@ -1,3 +1,4 @@
+
 {
   "proyectos": [
     {
@@ -14,7 +15,8 @@
               "final": [
                 10,
                 0
-              ]
+              ],
+              "color": "#F6FB34"
             },
             {
               "inicio": [
@@ -24,7 +26,8 @@
               "final": [
                 0,
                 8
-              ]
+              ],
+              "color": "#F6FB34"
             },
             {
               "inicio": [
@@ -34,7 +37,8 @@
               "final": [
                 10,
                 8
-              ]
+              ],
+              "color": "#F6FB34"
             },
             {
               "inicio": [
@@ -44,7 +48,8 @@
               "final": [
                 10,
                 7
-              ]
+              ],
+              "color": "#F6FB34"
             },
             {
               "inicio": [
@@ -54,7 +59,8 @@
               "final": [
                 4,
                 5
-              ]
+              ],
+              "color": "#F6FB34"
             },
             {
               "inicio": [
@@ -64,7 +70,8 @@
               "final": [
                 5,
                 7
-              ]
+              ],
+              "color": "#F6FB34"
             }
           ],
           "ventanas": [],

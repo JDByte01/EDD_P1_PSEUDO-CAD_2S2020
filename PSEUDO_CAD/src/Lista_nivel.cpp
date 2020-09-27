@@ -21,7 +21,7 @@ Lista_nivel::~Lista_nivel()
  */
 
  void Lista_nivel::cargarJSON(json j){
-    //cout << "Niveles: " << j["niveles"].size() << endl;
+    cout << "Niveles: " << j["niveles"].size() << endl;
     Nodo_nivel* n;
 
     for(int i = 0; i < j["niveles"].size(); i++){

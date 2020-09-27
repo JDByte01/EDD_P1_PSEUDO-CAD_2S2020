@@ -71,7 +71,7 @@ string Nodo_proyecto::getGraphviz(){
 
     if(this->derecha != NULL)
         g.append(this->derecha->getGraphviz()).append(" n").append(to_string(this->id)).append(" -> n").append(to_string(this->derecha->getId())).append(";\n");
-    return "";
+    return g;
 }
 
   /** \brief Obtiene el segmento de JSON equivalente al nodo
@@ -93,7 +93,7 @@ string Nodo_proyecto::getJSON(){
 
 void Nodo_proyecto::cargarJSON(json j){
     this->setNombre(j["nombre"]);
-
+    cout << j["nombre"] << endl;
     this->niveles->cargarJSON(j["niveles"]);
 
     cout << " | Archivo JSON leido exitosamente!" << endl;
@@ -109,6 +109,6 @@ void Nodo_proyecto::cargarJSON(json j){
 void Nodo_proyecto::imprimir(){
     cout << " | (" << to_string(this->id) << ") " << this->nombre << endl;
     cout << " | -> Niveles: " << to_string(this->sizeNiveles()) << endl;
-    this->niveles->imprimir();
+    //this->niveles->imprimir();
 }
 

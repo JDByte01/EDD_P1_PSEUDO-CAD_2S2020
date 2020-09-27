@@ -4,7 +4,7 @@ AVL_proyectos::AVL_proyectos()
 {
     //Constructor
     this->raiz = NULL;
-    this->lista = NULL;
+    this->lista = new Lista_proyectos();
 }
 
 AVL_proyectos::~AVL_proyectos()
@@ -312,14 +312,51 @@ void AVL_proyectos::imprimir(Nodo_proyecto* n){
  void AVL_proyectos::llenarLista(){
     //Limpiar la lista
     delete this->lista;
-
     llenarLista(this->raiz);
  }
 
  void AVL_proyectos::llenarLista(Nodo_proyecto* n){
-    if(this->raiz != NULL){
+    if(n != NULL){
         llenarLista(n->getIzquierda());
         this->lista->insertar(n->getId(), n->getNombre(), n->sizeNiveles());
         llenarLista(n->getDerecha());
     }
  }
+
+ /** \brief Cargar archivo JSON
+  *
+  * \param json j
+  * \return void
+  *
+  */
+
+void AVL_proyectos::cargarJSON(json j){
+     Nodo_proyecto* n;
+
+     cout << "Total de proyectos " << j["proyectos"].size() << endl;
+
+    for(int i = 0; i < j["proyectos"].size(); i++){
+        n = new Nodo_proyecto();
+        n->cargarJSON(j["proyectos"][i]);
+        insertar(n);
+    }
+}
+
+/** \brief Generar grafo Graphviz
+ *
+ * \param string nombre
+ * \return string dot
+ *
+ */
+
+string AVL_proyectos::getGraphviz(string nombre){
+    string g = "digraph G {\nnode [shape = oval ];\nlabel = \".: AVL - "+nombre+" :.\";\n";
+    if(raiz != NULL){
+        g.append(this->raiz->getGraphviz());
+    }
+
+    g.append("}");
+    return g;
+
+}
+

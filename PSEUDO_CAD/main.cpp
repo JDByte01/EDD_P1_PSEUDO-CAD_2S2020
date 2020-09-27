@@ -57,30 +57,81 @@ void testJSON(){
 void testAVL(){
     Archivo* archivo = new Archivo();
     string ruta = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Niveles.json";
+    string ruta2 = "C:/Users/JOSED/source/repos/EDD_P1_PSEUDO-CAD_2S2020/entradas/Proyectos.json";
 
     cout << "Test AVL" << endl;
+
+    AVL_proyectos* proyectos = new AVL_proyectos();
+    //proyectos->cargarJSON(archivo->leerJSON(ruta2));
 
     //Creando Nodo Proyecto
     Nodo_proyecto* np1 = new Nodo_proyecto();
     np1->setNombre("Proyecto 1");
-    np1->imprimir();
-
-
 
     Lista_nivel* ln = new Lista_nivel();
-
     ln->cargarJSON(archivo->leerJSON(ruta));
-
-    np1->setNombre("Proyecto 2");
     np1->setNiveles(ln);
-    np1->imprimir();
 
+    Nodo_proyecto* np2 = new Nodo_proyecto();
+    np2->setNombre("EDD 21");
+
+    Nodo_proyecto* np3 = new Nodo_proyecto();
+    np3->setNombre("COMPI 2");
+
+    Nodo_proyecto* np4 = new Nodo_proyecto();
+    np4->setNombre("ARQUI 1");
+
+    Nodo_proyecto* np5 = new Nodo_proyecto();
+    np5->setNombre("Final Final");
+
+    Nodo_proyecto* np6 = new Nodo_proyecto();
+    np6->setNombre("Final Final2");
+
+    Nodo_proyecto* np7 = new Nodo_proyecto();
+    np7->setNombre("Final Final Final");
+
+    Nodo_proyecto* np8 = new Nodo_proyecto();
+    np8->setNombre("Final1");
+
+    Nodo_proyecto* np9 = new Nodo_proyecto();
+    np9->setNombre("Final23");
+
+    Nodo_proyecto* np10 = new Nodo_proyecto();
+    np10->setNombre("Final F");
+
+
+    proyectos->insertar(np1);
+    proyectos->insertar(np2);
+    proyectos->insertar(np3);
+    proyectos->insertar(np4);
+    proyectos->insertar(np5);
+    proyectos->insertar(np6);
+    proyectos->insertar(np7);
+    proyectos->insertar(np8);
+    proyectos->insertar(np9);
+    proyectos->insertar(np10);
+
+    cout << "AVL proyectos" << endl;
+    proyectos->imprimir();
+
+    proyectos->eliminar(539);
+    //cout << "AVL proyectos" << endl;
+    //proyectos->imprimir();
+
+    cout << " Imprimir lista AZ" << endl;
+    proyectos->llenarLista();
+    proyectos->imprimirListaAZ();
+
+    cout << proyectos->getGraphviz("PSEUDO-CAD") << endl;
+
+/*
+    system("pause");
 
     //Lista ordenada de proyectos
     Lista_proyectos* lp = new Lista_proyectos();
 
     lp->insertar(125, "Py1 ", 10);
-    lp->insertar(120, "Py2 ", 1);
+    lp->insertar(120, "Py2 ", 2);
     lp->insertar(112, "Py3 ", 6);
     lp->insertar(123, "Py4 ", 3);
     lp->insertar(156, "Py5 ", 2);
@@ -91,7 +142,7 @@ void testAVL(){
 
     cout << " Imprimir lista ZA" << endl;
     lp->imprimirZA();
-
+*/
 }
 
 void testListaNivel(){
