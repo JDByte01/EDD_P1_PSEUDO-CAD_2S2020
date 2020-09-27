@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1601073327 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
+1601199808 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\main.cpp
 	<Lista_puntos.h>
 	<Nodo_objeto.h>
 	<Menus.h>
@@ -12,6 +12,8 @@
 	<Lista_nivel.h>
 	<Nodo_proyecto.h>
 	<AVL_proyectos.h>
+	<Nodo_lista.h>
+	<Lista_proyectos.h>
 	<Archivo.h>
 	<nlohmann/json.hpp>
 	<iostream>
@@ -89,7 +91,7 @@
 1600137322 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
 	"ABB_nivel.h"
 
-1601068467 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
+1601073560 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
 	"Lista_nivel.h"
 
 1600168856 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_nivel.h
@@ -109,14 +111,32 @@
 1600169523 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\avl_proyectos.cpp
 	"AVL_proyectos.h"
 
-1600169523 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
+1601194263 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\avl_proyectos.h
+	<Nodo_proyecto.h>
+	<iostream>
+	<string>
 
-1601073425 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601192348 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
-1601071232 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+1601191352 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
 	<Nodo_nivel.h>
 	<Lista_nivel.h>
 	<iostream>
 	<string>
+
+1601196605 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_lista.h
+	<iostream>
+	<string>
+
+1601196126 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\lista_proyectos.h
+	<Nodo_lista.h>
+	<iostream>
+	<string>
+
+1601199782 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_proyectos.cpp
+	"Lista_proyectos.h"
+
+1601198212 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_lista.cpp
+	"Nodo_lista.h"
 

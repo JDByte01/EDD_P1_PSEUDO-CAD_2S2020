@@ -63,6 +63,14 @@ Nodo_proyecto::~Nodo_proyecto()
    */
 
 string Nodo_proyecto::getGraphviz(){
+    g = "";
+    g.append("n").append(to_string(this->id)).append(" [label = \"").append(this->nombre).append(" N(").append(to_string(this->sizeNiveles())).append(")\"];\n");
+
+    if(this->izquierda != NULL)
+        g.append(this->izquierda->getGraphviz()).append(" n").append(to_string(this->id)).append(" -> n").append(to_string(this->izquierda->getId())).append(";\n");
+
+    if(this->derecha != NULL)
+        g.append(this->derecha->getGraphviz()).append(" n").append(to_string(this->id)).append(" -> n").append(to_string(this->derecha->getId())).append(";\n");
     return "";
 }
 

@@ -52,6 +52,7 @@ class Nodo_proyecto
         int id;
         int altura;
         string nombre;
+        string g = "";
 
         Lista_nivel* niveles;
 
