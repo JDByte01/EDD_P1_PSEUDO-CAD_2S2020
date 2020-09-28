@@ -64,7 +64,7 @@
 	<Lista_proyectos.h>
 	<iostream>
 
-1601268613 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1601269398 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
 1599909570 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
@@ -126,10 +126,10 @@
 	<iostream>
 	<string>
 
-1601268414 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601269144 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
-1601267899 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+1601269401 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
 	<Nodo_nivel.h>
 	<Lista_nivel.h>
 	<Nodo_lista.h>

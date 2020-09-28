@@ -581,13 +581,28 @@ void Menus::reporteProyecto(Nodo_proyecto* n){
                 system("pause");
                 break;
             case '2':
-                //Editar Nivel
+                //Nivel con mas espacio
+                l_temp = new Lista_proyectos();
+                n->reporteEspacio(l_temp);
+                l_temp->imprimirZA();
+
+                system("pause");
                 break;
             case '3':
-                //
+                //Nivel con menos paredes
+                l_temp = new Lista_proyectos();
+                n->reporteParedes(l_temp);
+                l_temp->imprimirAZ();
+
+                system("pause");
                 break;
             case '4':
-                //
+                //Nivel con menos paredes
+                l_temp = new Lista_proyectos();
+                n->reporteParedes(l_temp);
+                l_temp->imprimirZA();
+
+                system("pause");
                 break;
             case '5':
                 //

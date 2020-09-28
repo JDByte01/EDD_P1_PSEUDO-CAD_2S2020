@@ -55,10 +55,8 @@ class Nodo_proyecto
         void imprimirNiveles();
 
         void reporteObjetos(Lista_proyectos* lista);
-        void reporteEspacioAZ(Lista_proyectos* lista);
-        void reporteEspacioZA(Lista_proyectos* lista);
-        void reporteParedesAZ(Lista_proyectos* lista);
-        void reporteParedesZA(Lista_proyectos* lista);
+        void reporteEspacio(Lista_proyectos* lista);
+        void reporteParedes(Lista_proyectos* lista);
 
     protected:
 
