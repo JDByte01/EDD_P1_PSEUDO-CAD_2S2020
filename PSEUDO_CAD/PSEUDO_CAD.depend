@@ -48,7 +48,7 @@
 	<nlohmann/json.hpp>
 	<iostream>
 
-1601257565 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
+1601267940 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\menus.h
 	<Nodo_objeto.h>
 	<nlohmann/json.hpp>
 	<Archivo.h>
@@ -64,7 +64,7 @@
 	<Lista_proyectos.h>
 	<iostream>
 
-1601260276 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
+1601268613 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\menus.cpp
 	"Menus.h"
 
 1599909570 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\archivo.cpp
@@ -97,7 +97,7 @@
 	<Nodo_coordenada.h>
 	<ABB_lib.h>
 
-1600137322 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
+1601266185 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\abb_nivel.cpp
 	"ABB_nivel.h"
 
 1601256921 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\lista_nivel.cpp
@@ -126,12 +126,14 @@
 	<iostream>
 	<string>
 
-1601261089 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
+1601268414 source:c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\src\nodo_proyecto.cpp
 	"Nodo_proyecto.h"
 
-1601256639 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
+1601267899 c:\users\josed\source\repos\edd_p1_pseudo-cad_2s2020\pseudo_cad\include\nodo_proyecto.h
 	<Nodo_nivel.h>
 	<Lista_nivel.h>
+	<Nodo_lista.h>
+	<Lista_proyectos.h>
 	<iostream>
 	<string>
 

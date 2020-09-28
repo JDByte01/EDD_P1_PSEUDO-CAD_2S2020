@@ -3,6 +3,8 @@
 
 #include <Nodo_nivel.h>
 #include <Lista_nivel.h>
+#include <Nodo_lista.h>
+#include <Lista_proyectos.h>
 
 #include <iostream>
 #include <string>
@@ -51,6 +53,12 @@ class Nodo_proyecto
         void agregarNivel(int i);
         void eliminarNivel(int i);
         void imprimirNiveles();
+
+        void reporteObjetos(Lista_proyectos* lista);
+        void reporteEspacioAZ(Lista_proyectos* lista);
+        void reporteEspacioZA(Lista_proyectos* lista);
+        void reporteParedesAZ(Lista_proyectos* lista);
+        void reporteParedesZA(Lista_proyectos* lista);
 
     protected:
 

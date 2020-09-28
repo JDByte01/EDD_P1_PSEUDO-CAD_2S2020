@@ -138,3 +138,34 @@ void Nodo_proyecto::generarNiveles(){
  void Nodo_proyecto::eliminarNivel(int i){
     this->niveles->eliminarNivel(i);
  }
+
+
+ void Nodo_proyecto::reporteObjetos(Lista_proyectos* lista){
+
+     Nodo_nivel* temp = this->niveles->getInicio();
+     while(temp->getSiguiente() != NULL){
+        lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getObjetos());
+        temp = temp->getSiguiente();
+     }
+    lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getObjetos());
+ }
+
+  void Nodo_proyecto::reporteEspacio(Lista_proyectos* lista){
+
+     Nodo_nivel* temp = this->niveles->getInicio();
+     while(temp->getSiguiente() != NULL){
+        lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getX() * temp->getY());
+        temp = temp->getSiguiente();
+     }
+    lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getX() * temp->getY());
+ }
+
+  void Nodo_proyecto::reporteParedes(Lista_proyectos* lista){
+
+     Nodo_nivel* temp = this->niveles->getInicio();
+     while(temp->getSiguiente() != NULL){
+        lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getParedes());
+        temp = temp->getSiguiente();
+     }
+    lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getParedes());
+ }

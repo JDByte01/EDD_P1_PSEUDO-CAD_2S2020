@@ -492,6 +492,8 @@ void Menus::menuReportes(){
                 break;
             case '5':
                 //Escoger proyecto para más reportes
+                menuReportesProyecto();
+                flagMenuReportes = false;
                 break;
             case '0':
                 //Regresar
@@ -503,6 +505,105 @@ void Menus::menuReportes(){
                 break;
         }
     }while(flagMenuReportes);
+}
+
+void Menus::menuReportesProyecto(){
+    this->flagEditarProyecto = true;
+    this->idPry = 0;
+
+    do {
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%|          P  R  O  Y  E  C  T  O         |%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%| 0. Regresar" << endl;
+        proyectos->imprimir();
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%|  Ingresar Id del proyecto                       |%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin >> idPry;
+
+        if(idPry != 0){
+            cout << " |%%%| Proyecto (" << to_string(idPry) << ") seleccionado" << endl;
+            Nodo_proyecto* temp = proyectos->buscar(idPry);
+
+            if(temp != NULL){
+                //menuEditar(temp);
+                reporteProyecto(temp);
+            } else {
+                cout << " |%%%| **Proyecto no existe" << endl;
+            }
+
+            //Regresar a menu principal
+            system("pause");
+            flagVerProyecto = false;
+        } else {
+            //Regresar al ménu principal
+            limpiarVentana();
+            flagEditarProyecto = false;
+        }
+    }while(flagEditarProyecto);
+}
+
+void Menus::reporteProyecto(Nodo_proyecto* n){
+
+    this->flagMenuEditar = true;
+
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  R E P O R T E    P R O Y E C T O |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  1. Niveles por Objetos           |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  2. Niveles con mas espacio       |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  3. Niveles con menos paredes     |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  4. niveles con mas paredes       |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  5. Niveles con mas espacio       |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|     y mas ventanas                |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  6. Niveles con mas espacio       |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|     y menos ventanas              |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|                                   |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  0. Regresar                      |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%|  Escoja una opcion  |%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin.get(opMenu);
+
+        switch(opMenu){
+            case '1':
+                //Niveles por Objetos
+                l_temp = new Lista_proyectos();
+                n->reporteObjetos(l_temp);
+                l_temp->imprimirAZ();
+
+                system("pause");
+                break;
+            case '2':
+                //Editar Nivel
+                break;
+            case '3':
+                //
+                break;
+            case '4':
+                //
+                break;
+            case '5':
+                //
+                break;
+            case '6':
+                //
+                break;
+            case '0':
+                //Regresar
+                flagEditarProyecto = false;
+                break;
+            default:
+                limpiarVentana();
+                break;
+        }
+    } while(flagEditarProyecto);
 }
 
 void Menus::menuPrincipal(){

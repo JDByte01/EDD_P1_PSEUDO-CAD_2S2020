@@ -46,23 +46,17 @@ ABB_nivel::ABB_nivel(const ABB_nivel& other)
         }
     } else {
         //Encontrado
-        //Eliminar nodo y reordenar
+        //Nodo Hoja
 
-
-        // Código aqui....
-
-        ///Caso1: El nodo raiz es un nodo hoja
         if(raiz->getIzquierda() == NULL && raiz->getDerecha() == NULL){
-            if(this->getRaiz() == raiz){
-                this->setRaiz(NULL);
-            } else if(true){
-            }
-
-        ///Caso2: El nodo no es un nodo hoja
+            raiz = NULL;
+        } else if(raiz->getIzquierda() != NULL && raiz->getDerecha() == NULL){
+            raiz = raiz->getIzquierda();
+        } else if(raiz->getIzquierda() == NULL && raiz->getDerecha() != NULL){
+            raiz = raiz->getDerecha();
         } else {
-
+            raiz = raiz->getIzquierda();
         }
-
         return true;
     }
   }

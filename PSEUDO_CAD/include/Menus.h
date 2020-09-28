@@ -46,6 +46,9 @@ class Menus
         void eliminarProyecto(int id);
         void cargarJsonNivel(Nodo_proyecto* n);
 
+        void menuReportesProyecto();
+        void reporteProyecto(Nodo_proyecto* n);
+
         void menuReportes();
         void menuPrincipal();
 
@@ -76,6 +79,8 @@ class Menus
         Archivo* archivo;
         ABB_lib* librerias;
         AVL_proyectos* proyectos;
+
+        Lista_proyectos* l_temp;
 
 
         //Test
