@@ -78,6 +78,7 @@ void Lista_nivel::nuevoNivel(int nombre){
         if(this->inicio->getNombre() == nombre){
             this->inicio = this->inicio->getSiguiente();
             this->size--;
+            cout << " |%%%|-> Nivel eliminado con exito" << endl;
         } else {
             Nodo_nivel* temp = this->inicio;
             Nodo_nivel* anterior = this->inicio;
@@ -90,6 +91,7 @@ void Lista_nivel::nuevoNivel(int nombre){
             if(temp->getNombre() == nombre){
                 anterior->setSiguiente(temp->getSiguiente());
                 this->size--;
+                cout << " |%%%|-> Nivel eliminado con exito" << endl;
             }
         }
     }

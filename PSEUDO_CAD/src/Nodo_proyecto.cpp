@@ -120,3 +120,19 @@ void Nodo_proyecto::imprimir(){
 void Nodo_proyecto::generarNiveles(){
     this->niveles->generarNiveles(this->id);
 }
+
+/** \brief Métodos aplicados a la Lista de niveles
+ *
+ */
+
+ void Nodo_proyecto::agregarNivel(int i){
+    this->niveles->nuevoNivel(i);
+ }
+
+ void Nodo_proyecto::imprimirNiveles(){
+    this->niveles->imprimir();
+ }
+
+ void Nodo_proyecto::eliminarNivel(int i){
+    this->niveles->eliminarNivel(i);
+ }

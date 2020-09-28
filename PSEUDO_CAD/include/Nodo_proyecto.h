@@ -48,6 +48,10 @@ class Nodo_proyecto
 
         void generarNiveles();
 
+        void agregarNivel(int i);
+        void eliminarNivel(int i);
+        void imprimirNiveles();
+
     protected:
 
     private:

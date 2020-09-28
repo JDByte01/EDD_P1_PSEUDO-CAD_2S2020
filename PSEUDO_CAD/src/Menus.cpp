@@ -189,8 +189,187 @@ void Menus::menuVerProyectos(){
     }while(flagVerProyecto);
 }
 
+void Menus::menuEditarProyecto(){
+    this->flagEditarProyecto = true;
+    this->idPry = 0;
 
+    do {
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%|  E D I T A T    P  R  O  Y  E  C  T  O  |%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%| 0. Regresar" << endl;
+        proyectos->imprimir();
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%|  Ingresar Id del proyecto a editar              |%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin >> idPry;
 
+        if(idPry != 0){
+            cout << " |%%%| Proyecto (" << to_string(idPry) << ") seleccionado" << endl;
+            Nodo_proyecto* temp = proyectos->buscar(idPry);
+
+            if(temp != NULL){
+                menuEditar(temp);
+            } else {
+                cout << " |%%%| **Proyecto no existe" << endl;
+            }
+
+            //Regresar a menu principal
+            system("pause");
+            flagVerProyecto = false;
+        } else {
+            //Regresar al ménu principal
+            limpiarVentana();
+            flagEditarProyecto = false;
+        }
+    }while(flagEditarProyecto);
+}
+
+void Menus::menuEditar(Nodo_proyecto* n){
+    this->flagMenuEditar = true;
+
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%| M E N U  -  P R O Y E C T O |%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  1. Agregar nivel                 |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  2. Editar nivel                  |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  3. Eliminar nivel                |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  4. Eliminar proyecto             |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  5. Cargar JSON                   |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|                                   |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  0. Regresar                      |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%|  Escoja una opcion  |%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin.get(opMenu);
+
+        switch(opMenu){
+            case '1':
+                //Agregar Nivel al proyecto
+                agregarNivel(n);
+                limpiarVentana();
+                break;
+            case '2':
+                //Editar Nivel
+                break;
+            case '3':
+                //Eliminar Nivel
+                eliminarNivel(n);
+                limpiarVentana();
+                break;
+            case '4':
+                //Eliminar proyecto
+                eliminarProyecto(n->getId());
+                limpiarVentana();
+                break;
+            case '5':
+                //Cargar JSON
+                break;
+            case '0':
+                //Regresar
+                flagEditarProyecto = false;
+                break;
+            default:
+                limpiarVentana();
+                break;
+        }
+    } while(flagEditarProyecto);
+}
+
+void Menus::agregarNivel(Nodo_proyecto*n ){
+    this->flagAgregarNivel = true;
+    this->nombreNivel = "";
+    this->opMenu = '0';
+
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  Agregar un nivel al proyecto     |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  1. Confirmar, 0. Cancelar        |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin.get(opMenu);
+
+        if(opMenu != '0'){
+            if(opMenu == '1'){
+                n->agregarNivel(n->sizeNiveles() +1);
+
+                cout << " |%%%|-> Nivel agregado con exito..." << endl;
+
+                system("pause");
+                flagAgregarNivel = false;
+            } else {
+                cout << " |%%%| **Error: caracter invalido" << endl;
+            }
+
+        } else {
+            flagAgregarNivel = false;
+        }
+
+    } while(flagAgregarNivel);
+}
+
+void Menus::eliminarNivel(Nodo_proyecto* n){
+    this->flagEliminarNivel = true;
+    this->idNivel = 0;
+
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%|       E L I M I N A R   N I V E L       |%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%| 0. Regresar" << endl;
+        n->imprimirNiveles();
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%|  Ingresar el numero del nivel a eliminar        |%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin >> idNivel;
+
+        if(idNivel != 0){
+            if(isdigit(idNivel)){
+                n->eliminarNivel(idNivel);
+
+                system("pause");
+                flagEliminarNivel = false;
+            } else {
+                cout << " |%%%| **Error: caracter invalido" << endl;
+            }
+        } else {
+            //Regresar
+            flagEliminarNivel = false;
+        }
+    } while(flagEliminarNivel);
+}
+
+void Menus::eliminarProyecto(int id){
+
+    cout << " ___________________________________________________________" << endl;
+    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+    cout << " |%%%%%%%|    E L I M I N A R   P R O Y E C T O    |%%%%%%%|" << endl;
+    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+    cout << " |%%%%%%%|     1. Confirmar, 0. Cancelar           |%%%%%%%|" << endl;
+    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+    cout << " |> ";
+    cin.get(opMenu);
+
+    if(opMenu == '1'){
+        //Eliminar proyecto
+        if(proyectos->eliminar(id)){
+            cout << " |%%%|-> Proyecto eliminado con exito" << endl;
+        } else {
+            cout << " |%%%|-> No se pudo eliminar el proyecto" << endl;
+        }
+        system("pause");
+    }
+
+}
 
 void Menus::menuReportes(){
     this->flagMenuReportes = true;
@@ -284,9 +463,8 @@ void Menus::menuPrincipal(){
         cout << " |%%%%%%%%%%|  1. Ver proyectos                 |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  2. Editar proyectos              |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  3. Cargar proyectos              |%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%|  4. Graficar proyectos            |%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%|  5. Guardar proyectos             |%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%|  6. Crear nuevo proyecto          |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  4. Guardar proyectos             |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  5. Crear nuevo proyecto          |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  7. Cargar Librerias              |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  8. Reportes                      |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|                                   |%%%%%%%%%%|" << endl;
@@ -306,31 +484,28 @@ void Menus::menuPrincipal(){
             case '2':
                 //Editar proyectos
                 limpiarVentana();
+                menuEditarProyecto();
                 break;
             case '3':
                 //Cargar proyectos
                 limpiarVentana();
                 menuCargarProyecto();
                 break;
-            case'4':
-                //Graficar proyectos
-                limpiarVentana();
-                break;
-            case '5':
+            case '4':
                 //Guardar proyectos
                 limpiarVentana();
                 break;
-            case '6':
+            case '5':
                 //Crear Nuevo Proyecto
                 limpiarVentana();
                 menuNuevoProyecto();
                 break;
-            case '7':
+            case '6':
                 //Cargar librerias
                 limpiarVentana();
                 menuCargarLibrerias();
                 break;
-            case '8':
+            case '7':
                 //Reportes
                 limpiarVentana();
                 menuReportes();

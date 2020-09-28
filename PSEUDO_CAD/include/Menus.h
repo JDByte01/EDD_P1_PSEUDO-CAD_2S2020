@@ -38,6 +38,13 @@ class Menus
         void menuCargarProyecto();
         void menuNuevoProyecto();
         void menuVerProyectos();
+        void menuEditarProyecto();
+
+        void menuEditar(Nodo_proyecto* n);
+        void agregarNivel(Nodo_proyecto* n);
+        void eliminarNivel(Nodo_proyecto* n);
+        void eliminarProyecto(int id);
+        void cargarJsonNivel(Nodo_proyecto* n);
 
         void menuReportes();
         void menuPrincipal();
@@ -47,16 +54,22 @@ class Menus
         //Flags
         bool flagMenuCargarLibreria = true;
         bool flagMenuCargarProyecto = true;
+        bool flagEditarProyecto = true;
         bool flagNuevoProyecto = true;
         bool flagMenuPrincipal = true;
         bool flagMenuReportes = true;
         bool flagVerProyecto = true;
+        bool flagMenuEditar = true;
+        bool flagAgregarNivel = true;
+        bool flagEliminarNivel = true;
+
 
         //Auxiliares
         char opMenu;
         string rutaJsonLib;
         string rutaJsonPry;
         string nombreProyecto;
+        int idNivel;
         int idPry;
 
         //Estructuras
