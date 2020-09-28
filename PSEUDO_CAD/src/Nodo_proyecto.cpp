@@ -154,10 +154,10 @@ void Nodo_proyecto::generarNiveles(){
 
      Nodo_nivel* temp = this->niveles->getInicio();
      while(temp->getSiguiente() != NULL){
-        lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getX() * temp->getY());
+        lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), (temp->getX() * temp->getY()));
         temp = temp->getSiguiente();
      }
-    lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), temp->getX() * temp->getY());
+    lista->insertar(this->id, "Nivel "+to_string(temp->getNombre()), (temp->getX() * temp->getY()));
  }
 
   void Nodo_proyecto::reporteParedes(Lista_proyectos* lista){
