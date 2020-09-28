@@ -92,12 +92,14 @@ string Nodo_proyecto::getJSON(){
  */
 
 void Nodo_proyecto::cargarJSON(json j){
+    this->niveles->cargarJSON(j);
+    /*
     this->setNombre(j["nombre"]);
     cout << j["nombre"] << endl;
     this->niveles->cargarJSON(j["niveles"]);
 
     cout << " | Archivo JSON leido exitosamente!" << endl;
-    cout << " | Niveles: " << j["niveles"].size() << endl;
+    cout << " | Niveles: " << j["niveles"].size() << endl;*/
 }
 
 /** \brief Imprime los datos del nodo proyecto

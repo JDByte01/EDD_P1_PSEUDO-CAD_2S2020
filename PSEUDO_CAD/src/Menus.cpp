@@ -112,7 +112,7 @@ void Menus::menuCargarProyecto(){
         } else {
             //Regresar al ménu principal
             limpiarVentana();
-            flagMenuCargarLibreria = false;
+            flagMenuCargarProyecto = false;
         }
 
     }while(flagMenuCargarProyecto);
@@ -233,7 +233,7 @@ void Menus::menuEditar(Nodo_proyecto* n){
     do{
         cout << " ___________________________________________________________" << endl;
         cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%%%%%| M E N U  -  P R O Y E C T O |%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|    M E N U  -  P R O Y E C T O    |%%%%%%%%1%%|" << endl;
         cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  1. Agregar nivel                 |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  2. Editar nivel                  |%%%%%%%%%%|" << endl;
@@ -269,6 +269,8 @@ void Menus::menuEditar(Nodo_proyecto* n){
                 break;
             case '5':
                 //Cargar JSON
+                cargarJsonNivel(n);
+                limpiarVentana();
                 break;
             case '0':
                 //Regresar
@@ -283,7 +285,6 @@ void Menus::menuEditar(Nodo_proyecto* n){
 
 void Menus::agregarNivel(Nodo_proyecto*n ){
     this->flagAgregarNivel = true;
-    this->nombreNivel = "";
     this->opMenu = '0';
 
     do{
@@ -333,14 +334,14 @@ void Menus::eliminarNivel(Nodo_proyecto* n){
         cin >> idNivel;
 
         if(idNivel != 0){
-            if(isdigit(idNivel)){
+            //if(isdigit(idNivel)){
                 n->eliminarNivel(idNivel);
 
                 system("pause");
                 flagEliminarNivel = false;
-            } else {
-                cout << " |%%%| **Error: caracter invalido" << endl;
-            }
+            //} else {
+             //   cout << " |%%%| **Error: caracter invalido" << endl;
+            //}
         } else {
             //Regresar
             flagEliminarNivel = false;
@@ -349,25 +350,76 @@ void Menus::eliminarNivel(Nodo_proyecto* n){
 }
 
 void Menus::eliminarProyecto(int id){
+    this->flagEliminarNivel = true;
+    this->opMenu == '0';
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%|    E L I M I N A R   P R O Y E C T O    |%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%|     1. Confirmar, 0. Cancelar           |%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> ";
+        cin.get(opMenu);
 
-    cout << " ___________________________________________________________" << endl;
-    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
-    cout << " |%%%%%%%|    E L I M I N A R   P R O Y E C T O    |%%%%%%%|" << endl;
-    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
-    cout << " |%%%%%%%|     1. Confirmar, 0. Cancelar           |%%%%%%%|" << endl;
-    cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
-    cout << " |> ";
-    cin.get(opMenu);
-
-    if(opMenu == '1'){
-        //Eliminar proyecto
-        if(proyectos->eliminar(id)){
-            cout << " |%%%|-> Proyecto eliminado con exito" << endl;
-        } else {
-            cout << " |%%%|-> No se pudo eliminar el proyecto" << endl;
+        if(opMenu == '1'){
+            //Eliminar proyecto
+            if(proyectos->eliminar(id)){
+                cout << " |%%%|-> Proyecto eliminado con exito" << endl;
+                this->flagEditarProyecto = false;
+            } else {
+                cout << " |%%%|-> No se pudo eliminar el proyecto" << endl;
+            }
+            flagEliminarNivel = false;
+            system("pause");
+        } else if(opMenu == '0'){
+            flagEliminarNivel = false;
         }
-        system("pause");
-    }
+
+    } while(flagEliminarNivel);
+
+}
+
+void Menus::cargarJsonNivel(Nodo_proyecto* n){
+    this->flagMenuCargarLibreria = true;
+    this->rutaJsonLib = "";
+    do{
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%|   C A R G A R - N I V E L E S   |%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " ___________________________________________________________" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  0. Regresar                      |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%|  Ruta del archivo JSON  |%%%%%%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;
+        cout << " |> C:/ ";
+        cin >> rutaJsonLib;
+
+        if(rutaJsonLib != "0"){
+            rutaJsonLib = "C:/" + rutaJsonLib;
+            cout << " | Ruta ingresada: " << rutaJsonLib << endl;
+
+            if(archivo->existe(rutaJsonLib)){
+                //Existe el archivo
+                n->cargarJSON(archivo->leerJSON(rutaJsonLib));
+
+                //Regresar a menu principal
+                system("pause");
+                flagMenuCargarLibreria = false;
+            } else {
+                //No existe el archivo
+                cout << " |> **ERROR: Ruta incorrecta..." << endl;
+            }
+        } else {
+            //Regresar al ménu principal
+            limpiarVentana();
+            flagMenuCargarLibreria = false;
+        }
+
+    }while(flagMenuCargarLibreria);
+
 
 }
 
@@ -417,6 +469,7 @@ void Menus::menuReportes(){
             case '3':
                 //Reporte de proyectos ordenados por nivel (ASC)
                 if(!proyectos->estaVacio()){
+                    proyectos->llenarLista();
                     proyectos->imprimirListaAZ();
                 } else {
                     cout << " | AVL - Proyectos esta vacio..." << endl;
@@ -428,6 +481,7 @@ void Menus::menuReportes(){
             case '4':
                 //Reporte de proyectos ordenados por nivel (DESC)
                 if(!proyectos->estaVacio()){
+                    proyectos->llenarLista();
                     proyectos->imprimirListaZA();
                 } else {
                     cout << " | AVL - Proyectos esta vacio..." << endl;
@@ -465,8 +519,8 @@ void Menus::menuPrincipal(){
         cout << " |%%%%%%%%%%|  3. Cargar proyectos              |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  4. Guardar proyectos             |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  5. Crear nuevo proyecto          |%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%|  7. Cargar Librerias              |%%%%%%%%%%|" << endl;
-        cout << " |%%%%%%%%%%|  8. Reportes                      |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  6. Cargar Librerias              |%%%%%%%%%%|" << endl;
+        cout << " |%%%%%%%%%%|  7. Reportes                      |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|                                   |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%|  0. Salir                         |%%%%%%%%%%|" << endl;
         cout << " |%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|" << endl;

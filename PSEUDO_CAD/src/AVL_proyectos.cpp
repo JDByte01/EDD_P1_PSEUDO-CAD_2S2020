@@ -344,6 +344,9 @@ void AVL_proyectos::cargarJSON(json j){
 
     for(int i = 0; i < j["proyectos"].size(); i++){
         n = new Nodo_proyecto();
+        //cout << "Nombre: " << j["proyectos"][i]["nombre"] << endl;
+        n->setNombre(j["proyectos"][i]["nombre"]);
+        //cout << "Niveles: " << j["proyectos"][i] << endl;
         n->cargarJSON(j["proyectos"][i]);
         insertar(n);
     }

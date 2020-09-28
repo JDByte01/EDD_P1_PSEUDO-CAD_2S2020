@@ -163,11 +163,17 @@ void Nodo_nivel::cargarVentanasJSON(json j){
  void Nodo_nivel::mostrarNivel(int id){
     this->arbol->generarMatriz(this->matriz);
 
+    nombreABB = "";
+    nombreMatrix = "";
+
+    nombreABB.append("ABB_Nivel_").append(to_string(id)).append(to_string(this->getNombre()));
+    nombreMatrix.append("Matriz_Nivel_").append(to_string(id)).append(to_string(this->getNombre()));
+
     //Generar dot
     cout << "\n |%%%| -> Generando Matris Dispersa del nivel " << this->getNombre() << endl;
-    archivo->generarEstructura("Matriz_Nivel_"+id,this->matriz->getGraphviz("Nivel "+this->getNombre()));
+    archivo->generarEstructura(nombreMatrix,this->matriz->getGraphviz("Nivel "+this->getNombre()));
     cout << "\n |%%%| -> Generando Arbol Binario del nivel " << this->getNombre() << endl;
-    archivo->generarEstructura("ABB_Nivel_"+id,this->arbol->getGraphviz("ABB nivel "+this->getNombre()));
+    archivo->generarEstructura(nombreABB,this->arbol->getGraphviz("ABB nivel "+this->getNombre()));
  }
 
 /** \brief Retorna el tamaño en x de la matriz

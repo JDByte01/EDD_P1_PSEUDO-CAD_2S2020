@@ -58,6 +58,9 @@ class Nodo_nivel
         Matriz_nivel* matriz;
         Archivo* archivo;
 
+        string nombreABB = "";
+        string nombreMatrix = "";
+
         //auxiliares
         //int lix, lsx, liy, lsy, dx, dy;
 };
